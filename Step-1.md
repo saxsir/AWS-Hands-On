@@ -1,13 +1,5 @@
-# Step1
-
-## リージョン選択
-画像右上のリージョン選択から「アジアパシフィック（東京）」を選択
-
-![region-select](./images/region-select.png "リージョン選択")
-
-東京が選択されていること
-
-![region-tokyo](./images/region-tokyo.png "リージョン東京")
+# Step-1
+Step-1ではVPCを作成し、WordpressがインストールされたAMIを用いてEC2インスタンスを起動します。
 
 ## Question VPCとは
 VPCについて調べてみましょう(10分)
