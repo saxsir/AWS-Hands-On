@@ -19,3 +19,12 @@ VPCを選択
 
 ![vpc-2](./images/vpc-2.png "VPC2")
 
+![vpc-3](./images/vpc-3.png "VPC3")
+
+![vpc-4](./images/vpc-4.png "VPC4")
+
+![vpc-5](./images/vpc-5.png "VPC5")
+
+![vpc-6](./images/vpc-6.png "VPC6")
+
+![vpc-7](./images/vpc-7.png "VPC7")
