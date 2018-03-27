@@ -1,9 +1,11 @@
 # Step1
 
-## アベイラビリティゾーン選択
-画像右上のアベイラビリティゾーン選択から「アジアパシフィック（東京）」を選択
-![az-select](./images/az-select.png "アベイラビリティゾーン選択")
+## リージョン選択
+画像右上のリージョン選択から「アジアパシフィック（東京）」を選択
 
-以下の用に東京が選択されていること
-![az-tokyo](./images/az-tokyo.png "アベイラビリティゾーン東京")
+![region-select](./images/region-select.png "リージョン選択")
+
+東京が選択されていること
+
+![region-tokyo](./images/region-tokyo.png "リージョン東京")
 
