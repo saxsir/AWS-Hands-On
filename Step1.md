@@ -11,6 +11,9 @@
 
 ## VPCの作成
 
+### Question VPCとは
+VPCについて調べてみましょう(10分)
+
 サービスタブを選択しVPC管理ページを開く
 
 ![vpc-1](./images/vpc-1.png "VPC1")
