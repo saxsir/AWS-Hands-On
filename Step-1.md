@@ -179,3 +179,11 @@ VPCについて調べてみましょう(10分)
 ![wordpress-3](./images/wordpress-3.png "Wordpress3")
 
 ----
+
+![wordpress-4](./images/wordpress-4.png "Wordpress4")
+
+----
+
+![wordpress-5](./images/wordpress-5.png "Wordpress5")
+
+----
