@@ -158,11 +158,45 @@ VPCについて調べてみましょう(10分)
 ![ec2-13](./images/ec2-13.png "EC213")
 
 ----
-**作成したEC2インスタンスにて赤枠で囲った「パブリックDNS(IPv4)」の値をコピーしましょう。WordpressのURLとなります。**
+**作成したEC2インスタンスにて赤枠で囲った「パブリックDNS(IPv4)」の値をコピーしましょう。サーバログインのドメイン、WordpressのURLとなります。**
 
 ![ec2-14](./images/ec2-14.png "EC214")
 
 ----
+
+## サーバログイン
+**作成したEC2インスタンスにログインし環境の確認をしましょう。`1day-userXX.pem`は各自が作成した秘密鍵、ec2-XXXXXX.comは「パブリックDNS(IPv4)」の値です。「ec2-user@ip-10-0-0-XX」のプロンプトが返れば成功です**
+
+```
+$ chmod 600 1day-userXX.pem
+$ ssh -i 1day-userXX.pem -o StrictHostKeyChecking=no ec2-user@ec2-XXXXXX.com
+[ec2-user@ip-10-0-0-65 ~]$
+```
+
+**MySQLにrootユーザで接続し、所有しているデータベースの確認をしてみましょう**
+
+**パスワードは`wordpress`**
+
+```
+$ mysql -u root -p
+Enter password:
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| test               |
+| wordpress          |
++--------------------+
+5 rows in set (0.00 sec)
+```
+
+## Question
+1.このサーバに振られたIPアドレスの確認をしましょう。  
+2.このサーバのデフォルトゲートウェイを確認しましょう。
 
 ## Wordpressの初期設定
 **「パブリックDNS(IPv4)」の値でブラウザを開きましょう。Wordpressのサイトが開けば作成成功です。初期設定では「日本語」を選択し続けるボタンを押下**
