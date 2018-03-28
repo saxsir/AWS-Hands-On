@@ -154,3 +154,9 @@ VPCについて調べてみましょう(10分)
 ![ec2-12](./images/ec2-12.png "EC212")
 
 ----
+
+## Wordpressの初期設定
+
+![wordpress-1](./images/wordpress-1.png "Wordpress1")
+
+----
