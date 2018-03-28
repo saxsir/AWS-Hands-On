@@ -165,8 +165,17 @@ VPCについて調べてみましょう(10分)
 ----
 
 ## Wordpressの初期設定
-**「パブリックDNS(IPv4)」の値でブラウザを開きましょう**
+**「パブリックDNS(IPv4)」の値でブラウザを開きましょう。Wordpressのサイトが開けば作成成功です。初期設定では「日本語」を選択し続けるボタンを押下**
 
 ![wordpress-1](./images/wordpress-1.png "Wordpress1")
+
+----
+**「さあ、始めましょう」を押下**
+
+![wordpress-2](./images/wordpress-2.png "Wordpress2")
+
+----
+
+![wordpress-3](./images/wordpress-3.png "Wordpress3")
 
 ----
