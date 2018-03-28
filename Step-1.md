@@ -224,3 +224,7 @@ mysql> show databases;
 ![wordpress-5](./images/wordpress-5.png "Wordpress5")
 
 ----
+
+![wordpress-6](./images/wordpress-6.png "Wordpress6")
+
+----
