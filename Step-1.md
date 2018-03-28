@@ -104,3 +104,53 @@ VPCについて調べてみましょう(10分)
 ![subnet-5](./images/subnet-5.png "SUBNET5")
 
 ----
+
+## EC2インスタンスの作成
+
+![ec2-1](./images/ec2-1.png "EC21")
+
+----
+
+![ec2-2](./images/ec2-2.png "EC22")
+
+----
+
+![ec2-3](./images/ec2-3.png "EC23")
+
+----
+
+![ec2-4](./images/ec2-4.png "EC24")
+
+----
+
+![ec2-5](./images/ec2-5.png "EC25")
+
+----
+
+![ec2-6](./images/ec2-6.png "EC26")
+
+----
+
+![ec2-7](./images/ec2-7.png "EC27")
+
+----
+
+![ec2-8](./images/ec2-8.png "EC28")
+
+----
+
+![ec2-9](./images/ec2-9.png "EC29")
+
+----
+
+![ec2-10](./images/ec2-10.png "EC210")
+
+----
+
+![ec2-11](./images/ec2-11.png "EC211")
+
+----
+
+![ec2-12](./images/ec2-12.png "EC212")
+
+----
