@@ -158,12 +158,14 @@ VPCについて調べてみましょう(10分)
 ![ec2-13](./images/ec2-13.png "EC213")
 
 ----
+**作成したEC2インスタンスにて赤枠で囲った「パブリックDNS(IPv4)」の値をコピーしましょう。WordpressのURLとなります。**
 
 ![ec2-14](./images/ec2-14.png "EC214")
 
 ----
 
 ## Wordpressの初期設定
+**「パブリックDNS(IPv4)」の値でブラウザを開きましょう**
 
 ![wordpress-1](./images/wordpress-1.png "Wordpress1")
 
