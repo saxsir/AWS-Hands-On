@@ -70,3 +70,15 @@ VPCについて調べてみましょう(10分)
 ![vpc-10](./images/vpc-10.png "VPC10")
 
 ----
+
+## サブネットの追加作成
+
+**作成したVPCに対して追加でサブネットを加えましょう。**
+
+![subnet-1](./images/subnet-1.png "SUBNET1")
+
+----
+
+![subnet-2](./images/subnet-2.png "SUBNET2")
+
+----
