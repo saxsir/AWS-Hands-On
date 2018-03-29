@@ -94,3 +94,11 @@ RDS(Relational Database Service)、Auroraについて調べてみましょう(10
 ![rds-6](./images/step-2/rds-6.png "RDS6")
 
 ----
+
+![rds-7](./images/step-2/rds-7.png "RDS7")
+
+----
+
+![rds-8](./images/step-2/rds-8.png "RDS8")
+
+----
