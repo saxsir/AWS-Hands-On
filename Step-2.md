@@ -102,3 +102,42 @@ RDS(Relational Database Service)、Auroraについて調べてみましょう(10
 ![rds-8](./images/step-2/rds-8.png "RDS8")
 
 ----
+
+## 接続確認
+**EC2サーバにSSH接続し、EC2サーバからAuroraに接続してみましょう。また作成したAuroraインスタンスが意図したセグメントに配置されているかも確認しましょう。**
+
+```
+$ ssh -i 1day-userXX.pem -o StrictHostKeyChecking=no ec2-user@ec2-XXXXXX.com
+[ec2-user@ip-10-0-0-65 ~]$
+```
+
+**クラスタエンドポイントを使用してAuroraに接続しましょう。読み書きの権限についても確認しましょう。**
+
+**注意 wp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.comは各自のクラスタエンドポイントに直すこと**
+
+```
+$ mysql -u admin -p -hwp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
+mysql> select @read_only;
++------------+
+| @read_only |
++------------+
+| NULL       |
++------------+
+1 row in set (0.00 sec)
+```
+
+**読み込みエンドポイントを使用してAuroraに接続しましょう。読み書きの権限についても確認しましょう。**
+
+**注意 wp-userXX-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.comは各自の読み込みエンドポイントに直すこと**
+
+```
+$ mysql -u admin -p -hwp-userXX-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
+
+mysql> select @read_only;
++------------+
+| @read_only |
++------------+
+| NULL       |
++------------+
+1 row in set (0.00 sec)
+```
