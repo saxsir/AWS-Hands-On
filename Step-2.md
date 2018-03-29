@@ -16,6 +16,16 @@ RDS(Relational Database Service)、Auroraについて調べてみましょう(10
 
 ----
 
+|項目|設定値|
+|:-|:-|
+|セキュリティグループ名|db-ユーザ名 (例 db-user05)|
+|説明|RDS for Aurora|
+|VPC|作成したVPCを指定|
+
 ![security-3](./images/step-2/security-3.png "SECURITY3")
+
+----
+
+![security-4](./images/step-2/security-4.png "SECURITY4")
 
 ----
