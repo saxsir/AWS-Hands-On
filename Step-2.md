@@ -7,12 +7,12 @@ RDS(Relational Database Service)、Auroraについて調べてみましょう(10
 ## DB用セキュリティグループの作成
 **サービスからEC2を選択しましょう**
 
-![security-1](./images/security-1.png "SECURITY1")
+![security-1](./images/step-2/security-1.png "SECURITY1")
 
 ----
 **セキュリティグループタグからセキュリティグループの作成ボタンを押下**
 
-![security-1](./images/security-1.png "SECURITY1")
+![security-1](./images/step-2/security-1.png "SECURITY1")
 
 ----
 
