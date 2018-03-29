@@ -12,7 +12,10 @@ RDS(Relational Database Service)、Auroraについて調べてみましょう(10
 ----
 **セキュリティグループタグからセキュリティグループの作成ボタンを押下**
 
-![security-1](./images/step-2/security-1.png "SECURITY1")
+![security-2](./images/step-2/security-2.png "SECURITY2")
 
 ----
 
+![security-3](./images/step-2/security-3.png "SECURITY3")
+
+----
