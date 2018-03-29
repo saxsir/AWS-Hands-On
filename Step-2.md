@@ -58,3 +58,10 @@ RDS(Relational Database Service)、Auroraについて調べてみましょう(10
 ![rds-subnet-4](./images/step-2/rds-subnet-4.png "RDS-SUBNET4")
 
 ----
+
+## RDS Auroraインスタンスの作成
+**インスタンスタブからインスタンスの起動ボタンを押下**
+
+![rds-1](./images/step-2/rds-1.png "RDS1")
+
+----
