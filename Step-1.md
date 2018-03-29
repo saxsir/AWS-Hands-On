@@ -240,3 +240,5 @@ mysql> show databases;
 ![wordpress-9](./images/wordpress-9.png "Wordpress9")
 
 ----
+
+**ここまでのオペレーションでStep1は完了です！**
