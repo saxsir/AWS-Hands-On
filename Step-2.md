@@ -54,3 +54,7 @@ RDS(Relational Database Service)、Auroraについて調べてみましょう(10
 ![rds-subnet-3-2](./images/step-2/rds-subnet-3-2.png "RDS-SUBNET3-2")
 
 ----
+
+![rds-subnet-4](./images/step-2/rds-subnet-4.png "RDS-SUBNET4")
+
+----
