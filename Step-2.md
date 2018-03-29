@@ -65,3 +65,24 @@ RDS(Relational Database Service)、Auroraについて調べてみましょう(10
 ![rds-1](./images/step-2/rds-1.png "RDS1")
 
 ----
+**Amazon Auroraを選択し次へボタンを押下**
+
+![rds-2](./images/step-2/rds-2.png "RDS2")
+
+----
+
+![rds-3](./images/step-2/rds-3.png "RDS3")
+
+----
+
+![rds-4-1](./images/step-2/rds-4-1.png "RDS4-1")
+
+----
+
+![rds-4-2](./images/step-2/rds-4-2.png "RDS4-2")
+
+----
+
+![rds-4-3](./images/step-2/rds-4-3.png "RDS4-3")
+
+----
