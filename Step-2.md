@@ -33,3 +33,9 @@ RDS(Relational Database Service)、Auroraについて調べてみましょう(10
 ![security-5](./images/step-2/security-5.png "SECURITY5")
 
 ----
+
+## DBサブネットグループの作成
+
+![rds-subnet-1](./images/step-2/rds-subnet-1.png "RDS-SUBNET1")
+
+----
