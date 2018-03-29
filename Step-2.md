@@ -1,7 +1,10 @@
 # Step-2
-Step-2では「パブリックサブネット」内のEC2単体で賄っていたサービスのうちMySQLを「プライベートサブネット」に「Amazon Aurora MySQL」を利用して切り出します。
+Step-2ではミドルウェアレベルでの垂直分散を行います。具体的には「パブリックサブネット」内のEC2単体で賄っていたミドルウェアのうちMySQLを「プライベートサブネット」に「Amazon Aurora MySQL」を利用して切り出します。
 
-## Question
+## Question 垂直分散とは
+垂直分散について調べてみましょう(10分)
+
+## Question RDS、Auroraとは
 RDS(Relational Database Service)、Auroraについて調べてみましょう(10分)
 
 ## DB用セキュリティグループの作成
@@ -44,6 +47,10 @@ RDS(Relational Database Service)、Auroraについて調べてみましょう(10
 
 ----
 
-![rds-subnet-3](./images/step-2/rds-subnet-3.png "RDS-SUBNET3")
+![rds-subnet-3-1](./images/step-2/rds-subnet-3-1.png "RDS-SUBNET3-1")
+
+----
+
+![rds-subnet-3-2](./images/step-2/rds-subnet-3-2.png "RDS-SUBNET3-2")
 
 ----
