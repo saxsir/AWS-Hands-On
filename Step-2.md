@@ -29,3 +29,7 @@ RDS(Relational Database Service)、Auroraについて調べてみましょう(10
 ![security-4](./images/step-2/security-4.png "SECURITY4")
 
 ----
+
+![security-5](./images/step-2/security-5.png "SECURITY5")
+
+----
