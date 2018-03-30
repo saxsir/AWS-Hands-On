@@ -224,3 +224,5 @@ $ sudo vi /var/www/html/wp-config.php
 ```
 
 **ブラウザでWordpressサイトである、EC2インスタンスのパブリック DNS (IPv4)を開きましょう。データリストア前と同様にWordpressが表示されれば成功です。**
+
+**ここまでのオペレーションでStep2は完了です！**
