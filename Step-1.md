@@ -228,14 +228,17 @@ mysql> show databases;
 ![wordpress-6](./images/wordpress-6.png "Wordpress6")
 
 ----
+**ここまでの設定が間違いないか、ユーザ、パスワードを設定しログインしましょう**
 
 ![wordpress-7](./images/wordpress-7.png "Wordpress7")
 
 ----
+**管理画面にログインできれば設定完了です**
 
 ![wordpress-8](./images/wordpress-8.png "Wordpress8")
 
 ----
+**「パブリックDNS(IPv4)」の値でブラウザを開きましょう。Wordpressのサイトが開けば設定完了です**
 
 ![wordpress-9](./images/wordpress-9.png "Wordpress9")
 
