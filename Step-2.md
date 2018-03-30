@@ -173,3 +173,54 @@ wp-user05-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com  cano
 Name:   wp-user05.cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
 Address: 10.0.2.226
 ```
+
+## データ移行
+**原始的なバックアップリストアの機能を用いてEC2インスタンスのMySQL内にあるWordpressのデータをAuroraに移行します**
+
+**EC2インスタンスにログイン(事前にログインしてる場合は割愛する)**
+
+```
+$ ssh -i 1day-userXX.pem -o StrictHostKeyChecking=no ec2-user@ec2-XXXXXX.com
+[ec2-user@ip-10-0-0-65 ~]$
+```
+
+**mysqldumpを使いEC2インスタンスMySQLからデータバックアップ。パスワードは設定した内容を指定(wordpress)**
+
+```
+$ mysqldump -u root -p wordpress > export.sql
+Enter password:
+[ec2-user@ip-10-0-0-65 ~]$ ll
+合計 220
+-rw-rw-r-- 1 ec2-user ec2-user 221255  3月 30 00:55 export.sql
+```
+
+**EC2インスタンスのMySQLは今後使用しないので停止し、自動起動の設定を抑止しましょう**
+
+```
+$ sudo service mysqld stop
+$ sudo chkconfig --list mysqld
+mysqld          0:off   1:off   2:off   3:on    4:on    5:on    6:off
+
+$ sudo chkconfig --level 345 mysqld off
+$ sudo chkconfig --list mysqld
+mysqld          0:off   1:off   2:off   3:off   4:off   5:off   6:off
+```
+
+**リストア**
+
+**Auroraのクラスタエンドポイントを指定してexport.sqlをリストアしましょう**
+
+```
+mysql -u admin -p -hwp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com  wordpress < export.sql
+Enter password:
+```
+
+## WordpressのDB接続変更
+
+```
+$ sudo vi /var/www/html/wp-config.php
+- define('DB_HOST', 'localhost');
++ define('DB_HOST', 'wp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com');
+```
+
+**ブラウザでWordpressサイトである、EC2インスタンスのパブリック DNS (IPv4)を開きましょう。データリストア前と同様にWordpressが表示されれば成功です。**
