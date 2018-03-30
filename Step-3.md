@@ -6,3 +6,10 @@ Step-3ではWebサーバとアプリケーションレイヤの水平分散、�
 
 ## Question MultiA-Zとは
 AWS MultiA-Zについて調べてみましょう(10分)
+
+## AuroraをMultiA-Z構成に変更
+**サービスからRDSを選択**
+
+![multiaz-1](./images/step-3/multiaz-1.png "MULTIAZ1")
+
+----
