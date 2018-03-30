@@ -116,11 +116,12 @@ VPCについて調べてみましょう(10分)
 ![ec2-2](./images/step-1/ec2-2.png "EC22")
 
 ----
-**マイAIMタブ、「1Day-AMI」の選択ボタンを押下**
+**マイAMIタブ、「1Day-AMI」の選択ボタンを押下**
 
 ![ec2-3](./images/step-1/ec2-3.png "EC23")
 
 ----
+**t2.microを選択、次の手順：インスタンスの詳細の設定を押下**
 
 ![ec2-4](./images/step-1/ec2-4.png "EC24")
 
