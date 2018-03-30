@@ -136,10 +136,12 @@ VPCについて調べてみましょう(10分)
 ![ec2-6](./images/step-1/ec2-6.png "EC26")
 
 ----
+**タグの追加を押下**
 
 ![ec2-7](./images/step-1/ec2-7.png "EC27")
 
 ----
+**キーに「Name」、値に「webserver#1-ユーザ名 例 webserver#1-user05 」を設定し次の手順：セキュリティグループの設定を押下**
 
 ![ec2-8](./images/step-1/ec2-8.png "EC28")
 
