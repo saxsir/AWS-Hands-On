@@ -7,25 +7,25 @@ VPCについて調べてみましょう(10分)
 ## VPCの作成
 **実際にVPCを作成してみましょう。まずはサービスタブを選択しVPC管理ページを開きましょう**
 
-![vpc-1](./images/vpc-1.png "VPC1")
+![vpc-1](./images/step-1/vpc-1.png "VPC1")
 
 ----
 
-**VPCを選択します**
+**下にスクロールしVPCを選択します**
 
-![vpc-2](./images/vpc-2.png "VPC2")
+![vpc-2](./images/step-1/vpc-2.png "VPC2")
 
 ----
 
 **VPCウィザードの開始を選択します**
 
-![vpc-3](./images/vpc-3.png "VPC3")
+![vpc-3](./images/step-1/vpc-3.png "VPC3")
 
 ----
 
 **「ステップ1:VPC設定の選択」では「1個のパブリックサブネットを持つVPC」タブから選択ボタンを押下**
 
-![vpc-4](./images/vpc-4.png "VPC4")
+![vpc-4](./images/step-1/vpc-4.png "VPC4")
 
 ----
 
@@ -34,19 +34,19 @@ VPCについて調べてみましょう(10分)
 **VPC名: vpc-ユーザ名(例 vpc-user05 )**  
 **アベイラビリティゾーン: ap-northeast-1d**  
 
-![vpc-5](./images/vpc-5.png "VPC5")
+![vpc-5](./images/step-1/vpc-5.png "VPC5")
 
 ----
 
 **「VPCが正常に作成されました」ではOKボタンを押下**
 
-![vpc-6](./images/vpc-6.png "VPC6")
+![vpc-6](./images/step-1/vpc-6.png "VPC6")
 
 ----
 
 **「VPCダッシュボード」では直下の「VPCでフィルタリング」でユーザ名を入力しフィルタリングしましょう。以下の例ではuser05でフィルタリングしています**
 
-![vpc-7](./images/vpc-7.png "VPC7")
+![vpc-7](./images/step-1/vpc-7.png "VPC7")
 
 ----
 
@@ -55,19 +55,19 @@ VPCについて調べてみましょう(10分)
 **名前: vpc-ユーザ名**  
 **IPv4 CIDR: 10.0.0.0/16**  
 
-![vpc-8](./images/vpc-8.png "VPC8")
+![vpc-8](./images/step-1/vpc-8.png "VPC8")
 
 ----
 
 **ウィザードで作成したサブネットを確認しましょう。VPC作成ウィザードでは、VPC自体と一緒に1つ目のサブネットも作成されます。**
 
-![vpc-9](./images/vpc-9.png "VPC9")
+![vpc-9](./images/step-1/vpc-9.png "VPC9")
 
 ----
 
 **作成したサブネットのRoute Tableを確認しましょう。VPCのネットワークアドレス 10.0.0.0/16 のターゲットがlocalに、デフォルトルートの 0.0.0.0/0 のターゲットがインタネットゲートウェイ(igw-XXXX)になっており、インターネットと通信できる設定になっています。**
  
-![vpc-10](./images/vpc-10.png "VPC10")
+![vpc-10](./images/step-1/vpc-10.png "VPC10")
 
 ----
 
@@ -75,7 +75,7 @@ VPCについて調べてみましょう(10分)
 
 **作成したVPCに対して追加でサブネットを加えましょう。ここではサブネットの3つ作成を行いましょう**
 
-![subnet-1](./images/subnet-1.png "SUBNET1")
+![subnet-1](./images/step-1/subnet-1.png "SUBNET1")
 
 ----
 **1から4を以下を参考に設定しましょう。**
@@ -86,81 +86,81 @@ VPCについて調べてみましょう(10分)
 |3つ目|プライベートサブネット|自分で作成したVPCを指定|ap-northeast-1d|10.0.2.0/24|
 |4つ目|プライベートサブネット|自分で作成したVPCを指定|ap-northeast-1c|10.0.3.0/24|
 
-![subnet-2](./images/subnet-2.png "SUBNET2")
+![subnet-2](./images/step-1/subnet-2.png "SUBNET2")
 
 ----
 **全てのサブネットを確認しましょう。4つ作成され赤枠の内容が設定通りか確認しましょう。その際にIPv4でソートすると見易いです。**
 
-![subnet-3](./images/subnet-3.png "SUBNET3")
+![subnet-3](./images/step-1/subnet-3.png "SUBNET3")
 
 ----
 **パブリックサブネット(10.0.1.0/24)のルートテーブルを変更しましょう。パブリックサブネット(10.0.1.0/24)を選択しルートテーブルタブを選択、編集ボタンを押下**
 
-![subnet-4](./images/subnet-4.png "SUBNET4")
+![subnet-4](./images/step-1/subnet-4.png "SUBNET4")
 
 ----
 **現在使用しているルートテーブル以外にもう一つ選択できるはずです。そちらを選択し保存ボタンにて保存しましょう。選択するとインターネットゲートウェイの設定が追加されます。**
 
-![subnet-5](./images/subnet-5.png "SUBNET5")
+![subnet-5](./images/step-1/subnet-5.png "SUBNET5")
 
 ----
 
 ## EC2インスタンスの作成
 
-![ec2-1](./images/ec2-1.png "EC21")
+![ec2-1](./images/step-1/ec2-1.png "EC21")
 
 ----
 
-![ec2-2](./images/ec2-2.png "EC22")
+![ec2-2](./images/step-1/ec2-2.png "EC22")
 
 ----
 
-![ec2-3](./images/ec2-3.png "EC23")
+![ec2-3](./images/step-1/ec2-3.png "EC23")
 
 ----
 
-![ec2-4](./images/ec2-4.png "EC24")
+![ec2-4](./images/step-1/ec2-4.png "EC24")
 
 ----
 
-![ec2-5](./images/ec2-5.png "EC25")
+![ec2-5](./images/step-1/ec2-5.png "EC25")
 
 ----
 
-![ec2-6](./images/ec2-6.png "EC26")
+![ec2-6](./images/step-1/ec2-6.png "EC26")
 
 ----
 
-![ec2-7](./images/ec2-7.png "EC27")
+![ec2-7](./images/step-1/ec2-7.png "EC27")
 
 ----
 
-![ec2-8](./images/ec2-8.png "EC28")
+![ec2-8](./images/step-1/ec2-8.png "EC28")
 
 ----
 
-![ec2-9](./images/ec2-9.png "EC29")
+![ec2-9](./images/step-1/ec2-9.png "EC29")
 
 ----
 
-![ec2-10](./images/ec2-10.png "EC210")
+![ec2-10](./images/step-1/ec2-10.png "EC210")
 
 ----
 
-![ec2-11](./images/ec2-11.png "EC211")
+![ec2-11](./images/step-1/ec2-11.png "EC211")
 
 ----
 
-![ec2-12](./images/ec2-12.png "EC212")
+![ec2-12](./images/step-1/ec2-12.png "EC212")
 
 ----
 
-![ec2-13](./images/ec2-13.png "EC213")
+![ec2-13](./images/step-1/ec2-13.png "EC213")
 
 ----
 **作成したEC2インスタンスにて赤枠で囲った「パブリックDNS(IPv4)」の値をコピーしましょう。サーバログインのドメイン、WordpressのURLとなります。**
 
-![ec2-14](./images/ec2-14.png "EC214")
+![ec2-14](./images/step-1/ec2-14.png "EC214")
 
 ----
 
@@ -204,43 +204,43 @@ mysql> show databases;
 ## Wordpressの初期設定
 **「パブリックDNS(IPv4)」の値でブラウザを開きましょう。Wordpressのサイトが開けば作成成功です。初期設定では「日本語」を選択し続けるボタンを押下**
 
-![wordpress-1](./images/wordpress-1.png "Wordpress1")
+![wordpress-1](./images/step-1/wordpress-1.png "Wordpress1")
 
 ----
 **「さあ、始めましょう」を押下**
 
-![wordpress-2](./images/wordpress-2.png "Wordpress2")
+![wordpress-2](./images/step-1/wordpress-2.png "Wordpress2")
 
 ----
 
-![wordpress-3](./images/wordpress-3.png "Wordpress3")
+![wordpress-3](./images/step-1/wordpress-3.png "Wordpress3")
 
 ----
 
-![wordpress-4](./images/wordpress-4.png "Wordpress4")
+![wordpress-4](./images/step-1/wordpress-4.png "Wordpress4")
 
 ----
 
-![wordpress-5](./images/wordpress-5.png "Wordpress5")
+![wordpress-5](./images/step-1/wordpress-5.png "Wordpress5")
 
 ----
 
-![wordpress-6](./images/wordpress-6.png "Wordpress6")
+![wordpress-6](./images/step-1/wordpress-6.png "Wordpress6")
 
 ----
 **ここまでの設定が間違いないか、ユーザ、パスワードを設定しログインしましょう**
 
-![wordpress-7](./images/wordpress-7.png "Wordpress7")
+![wordpress-7](./images/step-1/wordpress-7.png "Wordpress7")
 
 ----
 **管理画面にログインできれば設定完了です**
 
-![wordpress-8](./images/wordpress-8.png "Wordpress8")
+![wordpress-8](./images/step-1/wordpress-8.png "Wordpress8")
 
 ----
 **「パブリックDNS(IPv4)」の値でブラウザを開きましょう。Wordpressのサイトが開けば設定完了です**
 
-![wordpress-9](./images/wordpress-9.png "Wordpress9")
+![wordpress-9](./images/step-1/wordpress-9.png "Wordpress9")
 
 ----
 
