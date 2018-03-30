@@ -29,3 +29,8 @@ AWS MultiA-Zについて調べてみましょう(10分)
 ![multiaz-3-3](./images/step-3/multiaz-3-3.png "MULTIAZ3-3")
 
 ----
+**約5分ほどでAuroraのレプリカは作成されます。画面中央上のリロードボタンを押して「利用可能」になるまで待ちましょう**
+
+![multiaz-3-3](./images/step-3/multiaz-3-3.png "MULTIAZ3-3")
+
+----
