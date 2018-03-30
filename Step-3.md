@@ -13,3 +13,19 @@ AWS MultiA-Zについて調べてみましょう(10分)
 ![multiaz-1](./images/step-3/multiaz-1.png "MULTIAZ1")
 
 ----
+
+![multiaz-2](./images/step-3/multiaz-2.png "MULTIAZ2")
+
+----
+
+![multiaz-3-1](./images/step-3/multiaz-3-1.png "MULTIAZ3-1")
+
+----
+
+![multiaz-3-2](./images/step-3/multiaz-3-2.png "MULTIAZ3-2")
+
+----
+
+![multiaz-3-3](./images/step-3/multiaz-3-3.png "MULTIAZ3-3")
+
+----
