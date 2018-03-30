@@ -4,15 +4,15 @@
 ## ログイン
 **こちらが提示したURLでログイン画面が開けます。合わせて連絡した今回のハンズオン用のIAMユーザのユーザ、パスワードでログインしましょう**
 
-![login](./images/login-1.png "ログイン")
+![login](./images/step-0/login-1.png "ログイン")
 
 ## リージョン選択
 全てのStepでは東京リージョンを選択した状態で進めます。必ず東京リージョンを設定しましょう。
 
 画像右上のリージョン選択から「アジアパシフィック（東京）」を選択
 
-![region-select](./images/region-select.png "リージョン選択")
+![region-select](./images/step-0/region-select.png "リージョン選択")
 
 東京が選択されていること
 
-![region-tokyo](./images/region-tokyo.png "リージョン東京")
+![region-tokyo](./images/step-0/region-tokyo.png "リージョン東京")
