@@ -113,10 +113,11 @@ $ ssh -i 1day-userXX.pem -o StrictHostKeyChecking=no ec2-user@ec2-XXXXXX.com
 
 **クラスタエンドポイントを使用してAuroraに接続しましょう。読み書きの権限についても確認しましょう。**
 
-**注意 wp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.comは各自のクラスタエンドポイントに直すこと**
+**注意 wp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.comは各自のクラスタエンドポイントに直すこと。パスワードはAurora作成時に設定した内容を指定すること**
 
 ```
-$ mysql -u admin -p -hwp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
+$ mysql -u admin -p -hwp-user05-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
+
 mysql> select @read_only;
 +------------+
 | @read_only |
@@ -124,11 +125,26 @@ mysql> select @read_only;
 | NULL       |
 +------------+
 1 row in set (0.00 sec)
+
+mysql> exit
+```
+
+**続いてネットワークセグメントの確認(クラスタエンドポイント)をしましょう**
+
+```
+$ nslookup wp-user05-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
+Server:     10.0.0.2
+Address:    10.0.0.2#53
+
+Non-authoritative answer:
+wp-user05-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com canonical name = wp-user05.cenae7eyijpr.ap-northeast-1.rds.amazonaws.com.
+Name:   wp-user05.cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
+Address: 10.0.2.226
 ```
 
 **読み込みエンドポイントを使用してAuroraに接続しましょう。読み書きの権限についても確認しましょう。**
 
-**注意 wp-userXX-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.comは各自の読み込みエンドポイントに直すこと**
+**注意 wp-userXX-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.comは各自の読み込みエンドポイントに直すこと。パスワードはAurora作成時に設定した内容を指定すること**
 
 ```
 $ mysql -u admin -p -hwp-userXX-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
@@ -139,5 +155,21 @@ mysql> select @read_only;
 +------------+
 | NULL       |
 +------------+
-1 row in set (0.00 sec)
+1 row in set (0.01 sec)
+
+mysql> exit
+```
+
+**続いてネットワークセグメントの確認(読み込みエンドポイント)をしましょう**
+
+```
+
+$ nslookup wp-user05-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
+Server:     10.0.0.2
+Address:    10.0.0.2#53
+
+Non-authoritative answer:
+wp-user05-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com  canonical name = wp-user05.cenae7eyijpr.ap-northeast-1.rds.amazonaws.com.
+Name:   wp-user05.cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
+Address: 10.0.2.226
 ```
