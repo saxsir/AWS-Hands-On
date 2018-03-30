@@ -116,6 +116,7 @@ VPCについて調べてみましょう(10分)
 ![ec2-2](./images/step-1/ec2-2.png "EC22")
 
 ----
+**マイAIMタブ、「1Day-AMI」の選択ボタンを押下**
 
 ![ec2-3](./images/step-1/ec2-3.png "EC23")
 
