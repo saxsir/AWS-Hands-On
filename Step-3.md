@@ -159,3 +159,8 @@ Address: 10.0.2.226
 ```
 
 ## WebサーバのAMIを作成
+**ここではWebサーバの水平分散にて必要となるEC2サーバのAMIを作成しましょう。AMIを作成することでここまでEC2サーバに設定した内容など全て反映された状態(Auroraの接続情報等)で水平分散が可能になります。**
+
+![create-ami-1](./images/step-3/create-ami-1.png "CREATE-AMI4")
+
+----
