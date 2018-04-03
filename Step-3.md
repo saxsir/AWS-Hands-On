@@ -366,9 +366,13 @@ mysql>
 ![modify-security-group-4](./images/step-3/modify-security-group-4.png "MODIFY-SECURITY-GROUP-4")
 
 ----
+**ELB(ALB)経由でアクセス出来れば設定成功です**
+
 ![modify-security-group-5](./images/step-3/modify-security-group-5.png "MODIFY-SECURITY-GROUP-5")
 
 ----
+**2台のEC2に直接アクセスした場合はタイムアウトなどでエラーとなれば設定成功です**
+
 ![modify-security-group-6](./images/step-3/modify-security-group-6.png "MODIFY-SECURITY-GROUP-6")
 
 ----
