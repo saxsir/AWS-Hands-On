@@ -178,3 +178,44 @@ Address: 10.0.2.226
 ![create-ami-5](./images/step-3/create-ami-5.png "CREATE-AMI5")
 
 ----
+
+## 2台目のEC2インスタンスの作成(水平分散準備)
+
+![create-ec2-1](./images/step-3/create-ec2-1.png "CREATE-EC2-1")
+
+----
+![create-ec2-2](./images/step-3/create-ec2-2.png "CREATE-EC2-2")
+
+----
+![create-ec2-3](./images/step-3/create-ec2-3.png "CREATE-EC2-3")
+
+----
+![create-ec2-4](./images/step-3/create-ec2-4.png "CREATE-EC2-4")
+
+----
+![create-ec2-5](./images/step-3/create-ec2-5.png "CREATE-EC2-5")
+
+----
+![create-ec2-6](./images/step-3/create-ec2-6.png "CREATE-EC2-6")
+
+----
+![create-ec2-7](./images/step-3/create-ec2-7.png "CREATE-EC2-7")
+
+----
+![create-ec2-8](./images/step-3/create-ec2-8.png "CREATE-EC2-8")
+
+----
+![create-ec2-9](./images/step-3/create-ec2-9.png "CREATE-EC2-9")
+
+----
+![create-ec2-10](./images/step-3/create-ec2-10.png "CREATE-EC2-10")
+
+----
+![create-ec2-11](./images/step-3/create-ec2-11.png "CREATE-EC2-11")
+
+----
+**作成完了まで数分掛かります**
+
+![create-ec2-12](./images/step-3/create-ec2-12.png "CREATE-EC2-12")
+
+----
