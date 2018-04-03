@@ -236,3 +236,44 @@ Address: 10.0.2.226
 ![create-elb-1](./images/step-3/create-elb-1.png "CREATE-ELB-1")
 
 ----
+
+![create-elb-2](./images/step-3/create-elb-2.png "CREATE-ELB-2")
+
+----
+
+![create-elb-3-1](./images/step-3/create-elb-3-1.png "CREATE-ELB-3-1")
+
+----
+![create-elb-3-2](./images/step-3/create-elb-3-2.png "CREATE-ELB-3-2")
+
+----
+![create-elb-3-3](./images/step-3/create-elb-3-3.png "CREATE-ELB-3-3")
+
+----
+![create-elb-4](./images/step-3/create-elb-4.png "CREATE-ELB-4")
+
+----
+![create-elb-5](./images/step-3/create-elb-5.png "CREATE-ELB-5")
+
+----
+![create-elb-6](./images/step-3/create-elb-6.png "CREATE-ELB-6")
+
+----
+![create-elb-7-1](./images/step-3/create-elb-7-1.png "CREATE-ELB-7-1")
+
+----
+![create-elb-7-2](./images/step-3/create-elb-7-2.png "CREATE-ELB-7-2")
+
+----
+![create-elb-8](./images/step-3/create-elb-8.png "CREATE-ELB-8")
+
+----
+![create-elb-9](./images/step-3/create-elb-9.png "CREATE-ELB-9")
+
+----
+![create-elb-10](./images/step-3/create-elb-10.png "CREATE-ELB-10")
+
+----
+![create-elb-11](./images/step-3/create-elb-11.png "CREATE-ELB-11")
+
+----
