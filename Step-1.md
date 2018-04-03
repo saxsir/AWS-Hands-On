@@ -2,7 +2,7 @@
 Step-1ではVPCを作成し、WordpressがインストールされたAMIを用いてEC2インスタンスを起動します。
 
 ## Question VPCとは
-Amazon VPC(Amazon Virtual Private Cloud)について調べてみましょう(10分)
+これから作成するAmazon VPC(Amazon Virtual Private Cloud)について調べてみましょう(10分)
 
 ## VPCの作成
 **実際にVPCを作成してみましょう。まずはサービスタブを選択しVPC管理ページを開きましょう**

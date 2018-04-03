@@ -115,3 +115,47 @@ wp-user05-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com  cano
 Name:   wp-user05-slave.cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
 Address: 10.0.3.217
 ```
+
+## 系切り替え
+**冗長構成となったAuroraのクラスタ〜エンドポイントを切り替えてみましょう。**
+
+![fail-over-1](./images/step-3/fail-over-1.png "FAIL-OVER1")
+
+----
+![fail-over-2](./images/step-3/fail-over-2.png "FAIL-OVER2")
+
+----
+![fail-over-3](./images/step-3/fail-over-3.png "FAIL-OVER3")
+
+----
+![fail-over-4](./images/step-3/fail-over-4.png "FAIL-OVER4")
+
+----
+
+**ネットワークセグメントの確認(クラスタエンドポイント)をしましょう**
+
+```
+$ nslookup wp-user05-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
+Server:     10.0.0.2
+Address:    10.0.0.2#53
+
+Non-authoritative answer:
+wp-user05-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com canonical name = wp-user05-slave.cenae7eyijpr.ap-northeast-1.rds.amazonaws.com.
+Name:   wp-user05-slave.cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
+Address: 10.0.3.217
+```
+
+**続いてネットワークセグメントの確認(読み込みエンドポイント)をしましょう**
+
+```
+$ nslookup wp-user05-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
+Server:     10.0.0.2
+Address:    10.0.0.2#53
+
+Non-authoritative answer:
+wp-user05-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com  canonical name = wp-user05.cenae7eyijpr.ap-northeast-1.rds.amazonaws.com.
+Name:   wp-user05.cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
+Address: 10.0.2.226
+```
+
+## WebサーバのAMIを作成
