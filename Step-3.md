@@ -274,6 +274,41 @@ Address: 10.0.2.226
 ![create-elb-10](./images/step-3/create-elb-10.png "CREATE-ELB-10")
 
 ----
+**Wordpressが表示されれば成功です。ALBの設定から反映され、表示されるまで少し時間が掛かる可能性があります**
 ![create-elb-11](./images/step-3/create-elb-11.png "CREATE-ELB-11")
 
 ----
+
+## Wordpressの設定変更
+**EC2サーバに接続しましょう(2台のうちどちらでも可) 。接続後クラスタエンドポイントでAuroraに接続しoption_valueの更新を行いましょう**
+
+```
+$ mysql -u admin -p -hwp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
+Enter password:
+
+mysql> use wordpress
+mysql> select option_value from wp_options where option_name = 'siteurl' or option_name = 'home';
++--------------------------------------------------------------+
+| option_value                                                 |
++--------------------------------------------------------------+
+| http://ec2-13-230-XX-73.ap-northeast-1.compute.amazonaws.com |
+| http://ec2-13-230-XX-73.ap-northeast-1.compute.amazonaws.com |
++--------------------------------------------------------------+
+2 rows in set (0.00 sec)
+
+mysql> update wp_options set option_value='http://elb-userXX-1940738389.ap-northeast-1.elb.amazonaws.com' where option_name = 'siteurl' or option_name = 'home';
+Query OK, 2 rows affected (0.00 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> select option_value from wp_options where option_name = 'siteurl' or option_name = 'home';
++---------------------------------------------------------------+
+| option_value                                                  |
++---------------------------------------------------------------+
+| http://elb-userXX-1940738389.ap-northeast-1.elb.amazonaws.com |
+| http://elb-userXX-1940738389.ap-northeast-1.elb.amazonaws.com |
++---------------------------------------------------------------+
+2 rows in set (0.00 sec)
+
+mysql>
+```
+
