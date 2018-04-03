@@ -275,6 +275,7 @@ Address: 10.0.2.226
 
 ----
 **Wordpressが表示されれば成功です。ALBの設定から反映され、表示されるまで少し時間が掛かる可能性があります**
+
 ![create-elb-11](./images/step-3/create-elb-11.png "CREATE-ELB-11")
 
 ----
@@ -312,3 +313,30 @@ mysql> select option_value from wp_options where option_name = 'siteurl' or opti
 mysql>
 ```
 
+## セキュリティグループの変更
+**現在HTTPリクエストはELB、各EC2インスタンスが受け付けています。この設定をELBからのみアクセスを許可するよう、セキュリティグループの変更をしましょう**
+
+![modify-security-group-1-1](./images/step-3/modify-security-group-1-1.png "MODIFY-SECURITY-GROUP-1-1")
+
+----
+![modify-security-group-1-2](./images/step-3/modify-security-group-1-2.png "MODIFY-SECURITY-GROUP-1-2")
+
+----
+![modify-security-group-1-3](./images/step-3/modify-security-group-1-3.png "MODIFY-SECURITY-GROUP-1-3")
+
+----
+![modify-security-group-2](./images/step-3/modify-security-group-2.png "MODIFY-SECURITY-GROUP-2")
+
+----
+![modify-security-group-3](./images/step-3/modify-security-group-3.png "MODIFY-SECURITY-GROUP-3")
+
+----
+![modify-security-group-4](./images/step-3/modify-security-group-4.png "MODIFY-SECURITY-GROUP-4")
+
+----
+![modify-security-group-5](./images/step-3/modify-security-group-5.png "MODIFY-SECURITY-GROUP-5")
+
+----
+![modify-security-group-6](./images/step-3/modify-security-group-6.png "MODIFY-SECURITY-GROUP-6")
+
+----
