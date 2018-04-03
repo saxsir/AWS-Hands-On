@@ -229,3 +229,10 @@ Address: 10.0.2.226
 ![create-ec2-14](./images/step-3/create-ec2-14.png "CREATE-EC2-14")
 
 ----
+
+## ELB(ALB)の作成
+**ここでは作成した2台のEC2インスタンスの前段にアクセスを振り分けるELB(ALB)の作成を行います**
+
+![create-elb-1](./images/step-3/create-elb-1.png "CREATE-ELB-1")
+
+----
