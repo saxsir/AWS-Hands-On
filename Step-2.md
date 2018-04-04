@@ -70,6 +70,7 @@ RDS(Relational Database Service)、Auroraについて調べてみましょう(10
 ![rds-2](./images/step-2/rds-2.png "RDS2")
 
 ----
+**マスターパスワードは「wordpress」を指定**
 
 ![rds-3](./images/step-2/rds-3.png "RDS3")
 
