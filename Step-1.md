@@ -1,6 +1,12 @@
 # Step-1
 Step-1ではVPCを作成し、WordpressがインストールされたAMIを用いてEC2インスタンスを起動します。
 
+## 概要図
+
+![step-1](./images/step-1/step-1.png "STEP1")
+
+----
+
 ## Question VPCとは
 これから作成するAmazon VPC(Amazon Virtual Private Cloud)について調べてみましょう(10分)
 
