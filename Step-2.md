@@ -1,5 +1,5 @@
 # Step-2
-Step-2ではミドルウェアレベルでの垂直分散を行います。具体的には「パブリックサブネット」内のEC2単体で賄っていたミドルウェアのうちMySQLを「プライベートサブネット」に「Amazon Aurora MySQL」を利用して切り出します。
+Step-2ではミドルウェアレベルでの垂直分散を行います。具体的には「パブリックサブネット」内のEC2単体で賄っていたミドルウェアのうちMySQLを「プライベートサブネット」に「Amazon Aurora MySQL」を利用して切り出します。更にStep-3でのWebサーバの水平分散を見越しアップロードファイルの格納場所をAmazon S3に変更し対応します。
 
 ## 概要図
 
@@ -334,6 +334,18 @@ $ sudo vi /var/www/html/wp-config.php
 **S3名は「s3-1day-userXX」ユーザIDは自身のを指定、その後、作成ボタンを押下**
 
 ![create-s3-3](./images/step-2/create-s3-3.png "CREATE-S3-3")
+
+----
+**Media Libraryタブを選択し、作成したS3バケット名を入力し、Save Bucketボタンを押下**
+
+![plugin-7](./images/step-2/plugin-7.png "PLUGIN7")
+
+----
+**適当な画像を使ってブログを新規投稿しましょう**
+
+**ブログの画像アドレスをコピーしS3のアドレスが指し示しているか確認しましょう**
+
+![plugin-7](./images/step-2/plugin-7.png "PLUGIN7")
 
 ----
 **ここまでのオペレーションでStep2は完了です！**
