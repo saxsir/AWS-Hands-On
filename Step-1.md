@@ -249,11 +249,12 @@ mysql> show databases;
 ![wordpress-4](./images/step-1/wordpress-4.png "Wordpress4")
 
 ----
-**サイトのタイトル、ユーザ名、パスワード、メールアドレスを設定しましょう。パスワードは生成された値をメモなどに残しましょう。検索エンジンでの表示はチェックをしインデックスされない設定を有効にしましょう。**
+**サイトのタイトル、ユーザ名、パスワード、メールアドレスを設定しましょう。パスワードは生成された値をメモなどに残しましょう。検索エンジンでの表示はチェックをしインデックスされない設定を有効にしましょう。設定したらWordPressを押下**
 
 ![wordpress-5](./images/step-1/wordpress-5.png "Wordpress5")
 
 ----
+**成功したらログインを押下**
 
 ![wordpress-6](./images/step-1/wordpress-6.png "Wordpress6")
 

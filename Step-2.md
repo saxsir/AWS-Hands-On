@@ -13,8 +13,11 @@ Step-2ではミドルウェアレベルでの垂直分散を行います。具�
 ## Question RDS、Auroraとは
 RDS(Relational Database Service)、Auroraについて調べてみましょう(10分)
 
+## Question S3とは
+S3について調べてみましょう(5分)
+
 ## DB用セキュリティグループの作成
-**サービスからEC2を選択しましょう**
+**ここではStep-1で作成したEC2インスタンス内にあるMySQLを垂直分散させるために、10.0.2.0のプライベートサブネットに作るAurora用のセキュリティグループを作成します。サービスからEC2を選択しましょう**
 
 ![security-1](./images/step-2/security-1.png "SECURITY1")
 
@@ -24,6 +27,7 @@ RDS(Relational Database Service)、Auroraについて調べてみましょう(10
 ![security-2](./images/step-2/security-2.png "SECURITY2")
 
 ----
+**以下の設定値を設定しましょう。ルールの追加を押下**
 
 |項目|設定値|
 |:-|:-|
@@ -34,6 +38,7 @@ RDS(Relational Database Service)、Auroraについて調べてみましょう(10
 ![security-3](./images/step-2/security-3.png "SECURITY3")
 
 ----
+**MySQL/Auroraを選択し、ソースのカラムでは web などのキーワードで補完させ自分が作成したwebサーバ用のセキュリティグループを選択しましょう。選択ご作成ボタンを押下**
 
 ![security-4](./images/step-2/security-4.png "SECURITY4")
 
