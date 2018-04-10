@@ -50,11 +50,12 @@ S3について調べてみましょう(5分)
 ----
 
 ## DBサブネットグループの作成
-**次にDB用のサブネットグループを作成します**
+**次にDB用のサブネットグループを作成します。サービスからRDSのリンクをクリック**
 
 ![rds-subnet-1](./images/step-2/rds-subnet-1.png "RDS-SUBNET1")
 
 ----
+**左下のサブネットグループのリンクをクリックし、DBサブネットグループの作成ボタンを押下**
 
 ![rds-subnet-2](./images/step-2/rds-subnet-2.png "RDS-SUBNET2")
 
