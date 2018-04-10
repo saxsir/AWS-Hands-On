@@ -70,6 +70,7 @@ S3について調べてみましょう(5分)
 ![rds-subnet-3-2](./images/step-2/rds-subnet-3-2.png "RDS-SUBNET3-2")
 
 ----
+**作成されていることを確認しましょう**
 
 ![rds-subnet-4](./images/step-2/rds-subnet-4.png "RDS-SUBNET4")
 
