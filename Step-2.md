@@ -100,6 +100,14 @@ S3について調べてみましょう(5分)
 ![rds-3](./images/step-2/rds-3.png "RDS3")
 
 ----
+**ネットワークセキュリティでは以下の設定をしましょう**
+
+|項目|設定値|
+|:-|:-|
+|Virtual Private Cloud (VPC)|自分が作成したVPCを選択|
+|サブネットグループ|自分が作成したサブネットグループ「db subnet userXX」|
+|パブリックアクセシビリティ|いいえを選択|
+|アベイラビリティゾーン|ap-noatheast-1d|
 
 ![rds-4-1](./images/step-2/rds-4-1.png "RDS4-1")
 
