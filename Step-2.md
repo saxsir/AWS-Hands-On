@@ -132,6 +132,7 @@ S3について調べてみましょう(5分)
 ![rds-4-3](./images/step-2/rds-4-3.png "RDS4-3")
 
 ----
+**DBインスタンスの詳細の表示ボタンを押下**
 
 ![rds-5](./images/step-2/rds-5.png "RDS5")
 
