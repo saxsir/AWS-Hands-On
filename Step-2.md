@@ -43,12 +43,14 @@ S3について調べてみましょう(5分)
 ![security-4](./images/step-2/security-4.png "SECURITY4")
 
 ----
+**作成したセキュリティグループ(db-userXX)が作成されていることを確認しましょう**
 
 ![security-5](./images/step-2/security-5.png "SECURITY5")
 
 ----
 
 ## DBサブネットグループの作成
+**次にDB用のサブネットグループを作成します**
 
 ![rds-subnet-1](./images/step-2/rds-subnet-1.png "RDS-SUBNET1")
 
