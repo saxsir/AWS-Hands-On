@@ -231,6 +231,15 @@ mysql> show databases;
 ![wordpress-2](./images/step-1/wordpress-2.png "Wordpress2")
 
 ----
+**データベース名、ユーザ名、パスワードを以下の設定値にしましょう。その他の値はデフォルトのままで問題ありません。**
+
+|項目|設定値|
+|:-|:-|
+|データベース名|wordpress|
+|ユーザ名|admin|
+|パスワード|wordpress|
+|データベースのホスト名|localhost|
+|テーブル接頭辞|wp_|
 
 ![wordpress-3](./images/step-1/wordpress-3.png "Wordpress3")
 
