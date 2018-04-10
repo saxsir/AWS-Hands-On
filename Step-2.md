@@ -345,7 +345,7 @@ $ sudo vi /var/www/html/wp-config.php
 
 **ブログの画像アドレスをコピーしS3のアドレスが指し示しているか確認しましょう**
 
-![plugin-7](./images/step-2/plugin-7.png "PLUGIN7")
+![plugin-8](./images/step-2/plugin-8.png "PLUGIN8")
 
 ----
 **ここまでのオペレーションでStep2は完了です！**
