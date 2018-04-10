@@ -286,4 +286,14 @@ $ sudo vi /var/www/html/wp-config.php
 ![plugin-2](./images/step-2/plugin-2.png "PLUGIN2")
 
 ----
+**次に「WP Offload S3 Lite」を検索し今すぐインストールボタンをクリックしましょう**
+
+![plugin-3](./images/step-2/plugin-3.png "PLUGIN3")
+
+----
+**有効化をクリック**
+
+![plugin-4](./images/step-2/plugin-4.png "PLUGIN4")
+
+----
 **ここまでのオペレーションでStep2は完了です！**
