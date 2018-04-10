@@ -60,6 +60,7 @@ S3について調べてみましょう(5分)
 ![rds-subnet-2](./images/step-2/rds-subnet-2.png "RDS-SUBNET2")
 
 ----
+**サブネットグループの詳細を設定しましょう。名前は「db subnet userXX」XXは自身のユーザID、説明は「RDS for Aurora」、VPCは自身が作ったVPC(vpc-userXX)を指定しましょう**
 
 ![rds-subnet-3-1](./images/step-2/rds-subnet-3-1.png "RDS-SUBNET3-1")
 
