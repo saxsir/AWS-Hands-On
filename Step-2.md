@@ -275,4 +275,11 @@ $ sudo vi /var/www/html/wp-config.php
 
 **ブラウザでWordpressサイトである、EC2インスタンスのパブリック DNS (IPv4)を開きましょう。データリストア前と同様にWordpressが表示されれば成功です。**
 
+## WordPressにプラグインの導入
+**S3を利用するためにWordPressにプラグインを導入しましょう**
+
+![plugin-1](./images/step-2/plugin-1.png "PLUGIN1")
+
+----
+
 **ここまでのオペレーションでStep2は完了です！**
