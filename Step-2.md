@@ -313,12 +313,12 @@ $ sudo vi /var/www/html/wp-config.php
 ----
 **Offload S3クリック**
 
-![plugin-4](./images/step-2/plugin-4.png "PLUGIN4")
+![plugin-5](./images/step-2/plugin-5.png "PLUGIN5")
 
 ----
 **Settingタブをクリックしアクセスキーが設定されていることを確認する**
 
-![plugin-5](./images/step-2/plugin-5.png "PLUGIN5")
+![plugin-6](./images/step-2/plugin-6.png "PLUGIN6")
 
 ----
 **S3の作成、サービスからS3を選択**
