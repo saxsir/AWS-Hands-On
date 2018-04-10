@@ -331,4 +331,9 @@ $ sudo vi /var/www/html/wp-config.php
 ![create-s3-2](./images/step-2/create-s3-2.png "CREATE-S3-2")
 
 ----
+**S3名は「s3-1day-userXX」ユーザIDは自身のを指定、その後、作成ボタンを押下**
+
+![create-s3-2](./images/step-2/create-s3-2.png "CREATE-S3-2")
+
+----
 **ここまでのオペレーションでStep2は完了です！**
