@@ -231,7 +231,7 @@ mysql> show databases;
 ![wordpress-2](./images/step-1/wordpress-2.png "Wordpress2")
 
 ----
-**データベース名、ユーザ名、パスワードを以下の設定値にしましょう。その他の値はデフォルトのままで問題ありません。**
+**データベース名、ユーザ名、パスワードを以下の設定値にしましょう。その他の値はデフォルトのままで問題ありません。設定をしたら送信ボタンを押下**
 
 |項目|設定値|
 |:-|:-|
@@ -244,10 +244,12 @@ mysql> show databases;
 ![wordpress-3](./images/step-1/wordpress-3.png "Wordpress3")
 
 ----
+**インストール実行を押下**
 
 ![wordpress-4](./images/step-1/wordpress-4.png "Wordpress4")
 
 ----
+**サイトのタイトル、ユーザ名、パスワード、メールアドレスを設定しましょう。パスワードは生成された値をメモなどに残しましょう。検索エンジンでの表示はチェックをしインデックスされない設定を有効にしましょう。
 
 ![wordpress-5](./images/step-1/wordpress-5.png "Wordpress5")
 
