@@ -311,9 +311,24 @@ $ sudo vi /var/www/html/wp-config.php
 + define( 'DBI_AWS_SECRET_ACCESS_KEY', '********************************' );
 ```
 ----
+**Offload S3クリック**
+
+![plugin-4](./images/step-2/plugin-4.png "PLUGIN4")
+
+----
+**Settingタブをクリックしアクセスキーが設定されていることを確認する**
+
+![plugin-5](./images/step-2/plugin-5.png "PLUGIN5")
+
+----
 **S3の作成、サービスからS3を選択**
 
 ![create-s3-1](./images/step-2/create-s3-1.png "CREATE-S3-1")
+
+----
+**バケットを作成するボタンを押下**
+
+![create-s3-2](./images/step-2/create-s3-2.png "CREATE-S3-2")
 
 ----
 **ここまでのオペレーションでStep2は完了です！**
