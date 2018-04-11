@@ -12,6 +12,9 @@ Step-1ではVPCを作成し、WordpressがインストールされたAMIを用�
 
 [公式 Amazon Virtual Private Cloud](https://aws.amazon.com/jp/vpc/)
 
+## Question アベイラビリティゾーンとは
+アベイラビリティゾーンについて調べてみましょう(5分)
+
 ## VPCの作成
 **実際にVPCを作成してみましょう。まずはサービスタブを選択しVPC管理ページを開きましょう**
 

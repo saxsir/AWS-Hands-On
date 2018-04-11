@@ -16,3 +16,8 @@
 東京が選択されていること
 
 ![region-tokyo](./images/step-0/region-tokyo.png "リージョン東京")
+
+## Question リージョンとは
+リージョンについて調べてみましょう(5分)
+
+**ここまでのオペレーションでStep0は完了です！**
