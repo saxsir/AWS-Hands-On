@@ -225,6 +225,8 @@ Address: 10.0.2.226
 ![create-ec2-2](./images/step-3/create-ec2-2.png "CREATE-EC2-2")
 
 ----
+**t2.microが選択されていることを確認し、次の手順：インスタンスの詳細の設定ボタンを押下**
+
 ![create-ec2-3](./images/step-3/create-ec2-3.png "CREATE-EC2-3")
 
 ----
