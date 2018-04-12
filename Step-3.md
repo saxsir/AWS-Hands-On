@@ -352,6 +352,8 @@ nameserver 10.0.0.2
 ![create-elb-3-3](./images/step-3/create-elb-3-3.png "CREATE-ELB-3-3")
 
 ----
+**次の手順：セキュリティグループの設定を押下**
+
 ![create-elb-4](./images/step-3/create-elb-4.png "CREATE-ELB-4")
 
 ----
