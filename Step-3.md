@@ -149,7 +149,15 @@ Address: 10.0.3.217
 
 ----
 
-**ネットワークセグメントの確認(クラスタエンドポイント)をしましょう**
+## 接続確認
+**EC2サーバにSSH接続し、EC2サーバからAuroraに接続してみましょう。フェイルオーバーにて作成したAuroraインスタンスが意図したセグメントに配置されているかも確認しましょう**
+
+```
+$ ssh -i 1day-userXX.pem -o StrictHostKeyChecking=no ec2-user@ec2-XXXXXX.com
+[ec2-user@ip-10-0-0-65 ~]$
+```
+
+**クラスタエンドポイントが存在するネットワークセグメントの確認をしましょう。10.0.3.XXXなら正しい設定です**
 
 ```
 $ nslookup wp-user05-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
@@ -162,7 +170,7 @@ Name:   wp-user05-slave.cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
 Address: 10.0.3.217
 ```
 
-**続いてネットワークセグメントの確認(読み込みエンドポイント)をしましょう**
+**読み込みエンドポイントが存在するネットワークセグメントの確認をしましょう。10.0.2.XXXなら正しい設定です**
 
 ```
 $ nslookup wp-user05-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
