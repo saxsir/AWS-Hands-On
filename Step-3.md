@@ -65,9 +65,9 @@ $ ssh -i 1day-userXX.pem -o StrictHostKeyChecking=no ec2-user@ec2-XXXXXX.com
 [ec2-user@ip-10-0-0-65 ~]$
 ```
 
-**クラスタエンドポイントを使用してAuroraに接続しましょう。読み書きの権限についても確認しましょう。**
+**クラスタエンドポイントを使用してAuroraに接続しましょう。**
 
-**注意 wp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.comは各自のクラスタエンドポイントに直すこと。パスワードはAurora作成時に設定した内容を指定すること**
+**注意 wp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.comは各自のクラスタエンドポイントに直すこと。パスワードはAurora作成時に設定した内容(この資料ではwordpressとなっています)を指定すること**
 
 ```
 $ mysql -u admin -p -hwp-user05-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
@@ -83,7 +83,7 @@ mysql> select @read_only;
 mysql> exit
 ```
 
-**続いてネットワークセグメントの確認(クラスタエンドポイント)をしましょう**
+**続いてクラスタエンドポイントが存在するネットワークセグメントの確認をしましょう。10.0.2.XXXなら正しい設定です**
 
 ```
 $ nslookup wp-user05-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
@@ -96,7 +96,7 @@ Name:   wp-user05.cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
 Address: 10.0.2.226
 ```
 
-**読み込みエンドポイントを使用してAuroraに接続しましょう。読み書きの権限についても確認しましょう。**
+**読み込みエンドポイントを使用してAuroraに接続しましょう。**
 
 **注意 wp-userXX-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.comは各自の読み込みエンドポイントに直すこと。パスワードはAurora作成時に設定した内容を指定すること**
 
@@ -114,7 +114,7 @@ mysql> select @read_only;
 mysql> exit
 ```
 
-**続いてネットワークセグメントの確認(読み込みエンドポイント)をしましょう**
+**続いて読み込みエンドポイントが存在するネットワークセグメントの確認をしましょう。10.0.3.XXXなら正しい設定です**
 
 ```
 $ nslookup wp-user05-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
