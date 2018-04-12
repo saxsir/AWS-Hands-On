@@ -392,7 +392,7 @@ nameserver 10.0.0.2
 ![create-elb-10](./images/step-3/create-elb-10.png "CREATE-ELB-10")
 
 ----
-**Wordpressが表示されれば成功です。ALBの設定から反映され、表示されるまで少し時間が掛かる可能性があります**
+**先ほどメモしたELB(ALB)のDNS名でブラウザを開きましょう。Wordpressが表示されれば成功です。ALBの設定から反映され、表示されるまで少し時間が掛かる可能性があります**
 
 ![create-elb-11](./images/step-3/create-elb-11.png "CREATE-ELB-11")
 
