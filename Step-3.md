@@ -368,6 +368,7 @@ nameserver 10.0.0.2
 
 ----
 **下部に表示された2つのインスタンスを2つともチェックしましょう。チェックすると登録済みに追加ボタンが有効化されるので押下**
+
 ![create-elb-7-1](./images/step-3/create-elb-7-1.png "CREATE-ELB-7-1")
 
 ----
@@ -381,6 +382,8 @@ nameserver 10.0.0.2
 ![create-elb-8](./images/step-3/create-elb-8.png "CREATE-ELB-8")
 
 ----
+**閉じるボタンを押下**
+
 ![create-elb-9](./images/step-3/create-elb-9.png "CREATE-ELB-9")
 
 ----
