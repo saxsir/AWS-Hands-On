@@ -376,6 +376,8 @@ nameserver 10.0.0.2
 ![create-elb-7-2](./images/step-3/create-elb-7-2.png "CREATE-ELB-7-2")
 
 ----
+**作成ボタンを押下**
+
 ![create-elb-8](./images/step-3/create-elb-8.png "CREATE-ELB-8")
 
 ----
