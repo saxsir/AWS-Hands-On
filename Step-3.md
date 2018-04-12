@@ -133,6 +133,8 @@ Address: 10.0.3.217
 ![fail-over-1](./images/step-3/fail-over-1.png "FAIL-OVER1")
 
 ----
+**フェイルオーバー選択ごインスタンスが表示されている項目右端のレプリケーションロール「書き込み」「読み込み」が入れ代わればフェイルオーバー成功です。中央上のリロードを押し確認しましょう。数分掛かります**
+
 ![fail-over-2](./images/step-3/fail-over-2.png "FAIL-OVER2")
 
 ----
