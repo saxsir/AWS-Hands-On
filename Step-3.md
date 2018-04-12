@@ -46,6 +46,7 @@ AWS MultiA-Zについて調べてみましょう(10分)
 ----
 
 ## Auroraクラスターの確認
+**追加で作成したAuroraインスタンス含めクラスターエンドポイント、読み取りエンドポイントが利用可能か確認しましょう。左のクラスターリンクをクリックしStep-2で作成したDBクラスター識別子のリンクをクリックしましょう**
 
 ![aurora-cluster-1](./images/step-3/aurora-cluster-1.png "AURORA-CLUSTER1")
 
