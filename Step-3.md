@@ -230,6 +230,12 @@ Address: 10.0.2.226
 ![create-ec2-3](./images/step-3/create-ec2-3.png "CREATE-EC2-3")
 
 ----
+
+|項目|設定値|
+|ネットワーク|Step-1で作ったvpcを指定。vpc-userXX|
+|サブネット|パブリックサブネット ap-northeast-1c 10.0.1.0を指定|
+|自動割り当てパブリックIP|有効化|
+
 ![create-ec2-4](./images/step-3/create-ec2-4.png "CREATE-EC2-4")
 
 ----
