@@ -332,6 +332,7 @@ nameserver 10.0.0.2
 ![create-elb-1](./images/step-3/create-elb-1.png "CREATE-ELB-1")
 
 ----
+**左の「Application Load Balancer」の作成ボタンを押下**
 
 ![create-elb-2](./images/step-3/create-elb-2.png "CREATE-ELB-2")
 
