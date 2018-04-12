@@ -14,11 +14,12 @@ Step-3ではWebサーバとアプリケーションレイヤの水平分散、�
 AWS MultiA-Zについて調べてみましょう(10分)
 
 ## AuroraをMultiA-Z構成に変更
-**サービスからRDSを選択**
+**ここではStep-2で作成したAuroraインスタンスをMultiA-Zの機能を用いて冗長化します。サービスからRDSを選択しましょう**
 
 ![multiaz-1](./images/step-3/multiaz-1.png "MULTIAZ1")
 
 ----
+**左側のインスンタンスリンクをクリックし、作成したAuroraインスタンス(wp-userXX)をチェックし、インスタンスの操作のプルダウンからAuroraレプリカの作成を選択しましょう**
 
 ![multiaz-2](./images/step-3/multiaz-2.png "MULTIAZ2")
 
