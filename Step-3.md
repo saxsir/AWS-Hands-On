@@ -371,6 +371,8 @@ nameserver 10.0.0.2
 ![create-elb-7-1](./images/step-3/create-elb-7-1.png "CREATE-ELB-7-1")
 
 ----
+**登録済みターゲットに2つのパブリックネットワーク上に存在するインスタンスが存在すること。次の手順：確認ボタンを押下**
+
 ![create-elb-7-2](./images/step-3/create-elb-7-2.png "CREATE-ELB-7-2")
 
 ----
