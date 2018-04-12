@@ -256,6 +256,8 @@ Address: 10.0.2.226
 ![create-ec2-7](./images/step-3/create-ec2-7.png "CREATE-EC2-7")
 
 ----
+**Step-1で作成したインターネットゲートウェイからリクエストを許可するWebサーバ用のセキュリティグループを割り当て、確認と作成ボタンを押下**
+
 ![create-ec2-8](./images/step-3/create-ec2-8.png "CREATE-EC2-8")
 
 ----
