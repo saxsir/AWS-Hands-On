@@ -261,9 +261,13 @@ Address: 10.0.2.226
 ![create-ec2-8](./images/step-3/create-ec2-8.png "CREATE-EC2-8")
 
 ----
+**作成ボタンを押下**
+
 ![create-ec2-9](./images/step-3/create-ec2-9.png "CREATE-EC2-9")
 
 ----
+**Step-1で作成したキーペアであることを確認し、「選択したプライベートキーファイル (1day-user05.pem) へのアクセス権があり、このファイルなしではインスタンスにログインできないことを認識しています。」にチェック後、インスタンス作成ボタンを押下**
+
 ![create-ec2-10](./images/step-3/create-ec2-10.png "CREATE-EC2-10")
 
 ----
