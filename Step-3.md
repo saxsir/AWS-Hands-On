@@ -337,6 +337,7 @@ nameserver 10.0.0.2
 ![create-elb-2](./images/step-3/create-elb-2.png "CREATE-ELB-2")
 
 ----
+**名前は「elb-ユーザ名」を設定しましょう**
 
 ![create-elb-3-1](./images/step-3/create-elb-3-1.png "CREATE-ELB-3-1")
 
