@@ -34,6 +34,7 @@ AWS MultiA-Zについて調べてみましょう(10分)
 ![multiaz-3-2](./images/step-3/multiaz-3-2.png "MULTIAZ3-2")
 
 ----
+**更に下にスクロールし、設定内容は変更せず、Auroraレプリカの作成ボタンを押下**
 
 ![multiaz-3-3](./images/step-3/multiaz-3-3.png "MULTIAZ3-3")
 
