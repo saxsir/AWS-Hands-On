@@ -251,6 +251,8 @@ Address: 10.0.2.226
 ![create-ec2-6](./images/step-3/create-ec2-6.png "CREATE-EC2-6")
 
 ----
+**キー「Name」、値「webserver#2-userXX」XXはユーザIDを設定し、次の手順：セキュリティグループの設定を押下**
+
 ![create-ec2-7](./images/step-3/create-ec2-7.png "CREATE-EC2-7")
 
 ----
