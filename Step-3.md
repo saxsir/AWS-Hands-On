@@ -24,6 +24,7 @@ AWS MultiA-Zについて調べてみましょう(10分)
 ![multiaz-2](./images/step-3/multiaz-2.png "MULTIAZ2")
 
 ----
+**アベイラビリティゾーンはap-northeast-1cを選択、インターネットゲートウェイからのアクセスは抑止するためパブリックアクセス可能では"いいえ”を選択**
 
 ![multiaz-3-1](./images/step-3/multiaz-3-1.png "MULTIAZ3-1")
 
