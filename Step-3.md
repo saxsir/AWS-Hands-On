@@ -143,6 +143,8 @@ Address: 10.0.3.217
 ![fail-over-2](./images/step-3/fail-over-2.png "FAIL-OVER2")
 
 ----
+**書き込み」「読み込み」が入れ代わればフェイルオーバー成功です**
+
 ![fail-over-4](./images/step-3/fail-over-4.png "FAIL-OVER4")
 
 ----
