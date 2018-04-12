@@ -230,6 +230,7 @@ Address: 10.0.2.226
 ![create-ec2-3](./images/step-3/create-ec2-3.png "CREATE-EC2-3")
 
 ----
+**以下を設定しましょう**
 
 |項目|設定値|
 |:-|:-|
@@ -240,6 +241,8 @@ Address: 10.0.2.226
 ![create-ec2-4](./images/step-3/create-ec2-4.png "CREATE-EC2-4")
 
 ----
+**特に設定せず、次の手順：タグの追加を押下**
+
 ![create-ec2-5](./images/step-3/create-ec2-5.png "CREATE-EC2-5")
 
 ----
