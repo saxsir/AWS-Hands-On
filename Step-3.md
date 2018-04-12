@@ -337,14 +337,18 @@ nameserver 10.0.0.2
 ![create-elb-2](./images/step-3/create-elb-2.png "CREATE-ELB-2")
 
 ----
-**名前は「elb-ユーザ名」を設定しましょう**
+**名前は「elb-ユーザ名」を設定し、下にスクロールしましょう**
 
 ![create-elb-3-1](./images/step-3/create-elb-3-1.png "CREATE-ELB-3-1")
 
 ----
+**Step-1で作成したVPCを選択するとアベイラビリティゾーンの選択ができます。ap-northeast-1c、ap-northeast-1dの両方にチェックし、表示されたパブリックサブネットを両方選択しましょう**
+
 ![create-elb-3-2](./images/step-3/create-elb-3-2.png "CREATE-ELB-3-2")
 
 ----
+**ap-northeast-1c、ap-northeast-1dのパブリックサブネットが表示されていれば成功です。次の手順：セキュリティ設定の構成ボタンを押下**
+
 ![create-elb-3-3](./images/step-3/create-elb-3-3.png "CREATE-ELB-3-3")
 
 ----
