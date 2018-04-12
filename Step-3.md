@@ -201,6 +201,8 @@ Address: 10.0.2.226
 ![create-ami-3](./images/step-3/create-ami-3.png "CREATE-AMI3")
 
 ----
+**閉じるボタンを押下**
+
 ![create-ami-4](./images/step-3/create-ami-4.png "CREATE-AMI4")
 
 ----
