@@ -281,7 +281,7 @@ Address: 10.0.2.226
 ![create-ec2-12](./images/step-3/create-ec2-12.png "CREATE-EC2-12")
 
 ----
-**パブリックDNS(IPv4)のあたいを確認しブラウザでWordpressが参照できるか確認しましょう**
+**作成した#2のインスタンスをチェックし、パブリックDNS(IPv4)のあたいをメモしブラウザでWordpressが参照できるか確認しましょう**
 
 ![create-ec2-13](./images/step-3/create-ec2-13.png "CREATE-EC2-13")
 
