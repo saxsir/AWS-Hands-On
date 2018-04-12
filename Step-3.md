@@ -191,6 +191,8 @@ Address: 10.0.2.226
 ![create-ami-1](./images/step-3/create-ami-1.png "CREATE-AMI1")
 
 ----
+**左のインスタンスを選択し、Step-1で作成したEC2インスタンス「webserver#1-userXX」にチェック、アクションプルダウンからイメージとイメージの作成を選択しましょう**
+
 ![create-ami-2](./images/step-3/create-ami-2.png "CREATE-AMI2")
 
 ----
