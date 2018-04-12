@@ -387,6 +387,8 @@ nameserver 10.0.0.2
 ![create-elb-9](./images/step-3/create-elb-9.png "CREATE-ELB-9")
 
 ----
+**作成したELB(ALB)をチェックし下部の説明タブの内容をスクロールさせDNS名をメモしましょう。最終的にはインターネットゲートウェイからのアクセスはこのDNS名のみになります**
+
 ![create-elb-10](./images/step-3/create-elb-10.png "CREATE-ELB-10")
 
 ----
