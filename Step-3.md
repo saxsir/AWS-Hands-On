@@ -271,6 +271,8 @@ Address: 10.0.2.226
 ![create-ec2-10](./images/step-3/create-ec2-10.png "CREATE-EC2-10")
 
 ----
+**右下インスタンスの表示ボタンを押下**
+
 ![create-ec2-11](./images/step-3/create-ec2-11.png "CREATE-EC2-11")
 
 ----
