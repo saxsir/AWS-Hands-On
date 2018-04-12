@@ -276,7 +276,7 @@ Address: 10.0.2.226
 ![create-ec2-11](./images/step-3/create-ec2-11.png "CREATE-EC2-11")
 
 ----
-**作成完了まで数分掛かります**
+**作成したインスタンスが表示され、作成完了であるステータスチェック「2/2 のチェックに合格しました」となるまで待ちましょう。作成完了まで数分掛かります**
 
 ![create-ec2-12](./images/step-3/create-ec2-12.png "CREATE-EC2-12")
 
