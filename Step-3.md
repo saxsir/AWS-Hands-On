@@ -362,6 +362,8 @@ nameserver 10.0.0.2
 ![create-elb-5](./images/step-3/create-elb-5.png "CREATE-ELB-5")
 
 ----
+**名前は「tg-elb-ユーザ名」を設定し、次の手順：ターゲットの登録ボタンを押下**
+
 ![create-elb-6](./images/step-3/create-elb-6.png "CREATE-ELB-6")
 
 ----
