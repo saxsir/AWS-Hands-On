@@ -246,6 +246,8 @@ Address: 10.0.2.226
 ![create-ec2-5](./images/step-3/create-ec2-5.png "CREATE-EC2-5")
 
 ----
+**タグの追加ボタンを押下**
+
 ![create-ec2-6](./images/step-3/create-ec2-6.png "CREATE-EC2-6")
 
 ----
