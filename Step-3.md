@@ -206,7 +206,7 @@ Address: 10.0.2.226
 ![create-ami-4](./images/step-3/create-ami-4.png "CREATE-AMI4")
 
 ----
-**数分で作成が完了します**
+**左下AMIを選択しAMIが作成されれば完了です。数分で作成が完了します**
 
 ![create-ami-5](./images/step-3/create-ami-5.png "CREATE-AMI5")
 
