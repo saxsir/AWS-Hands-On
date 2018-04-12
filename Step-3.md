@@ -196,6 +196,8 @@ Address: 10.0.2.226
 ![create-ami-2](./images/step-3/create-ami-2.png "CREATE-AMI2")
 
 ----
+**イメージ名、イメージの説明ともに「wordpress ユーザ名」で設定、設定後イメージの作成ボタンを押下**
+
 ![create-ami-3](./images/step-3/create-ami-3.png "CREATE-AMI3")
 
 ----
