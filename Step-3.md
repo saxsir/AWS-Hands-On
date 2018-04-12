@@ -213,10 +213,15 @@ Address: 10.0.2.226
 ----
 
 ## 2台目のEC2インスタンスの作成(水平分散準備)
+**インターネットゲートウェイ、ロードバランサーからHTTPリクエストを受け付けるWeb+AP(WordPress)サーバであるEC2インスタンスを先ほど作成したAMIも用いて作成しましょう**
+
+**左下AMIリンクを選択、作成したAMIをチェック**
 
 ![create-ec2-1](./images/step-3/create-ec2-1.png "CREATE-EC2-1")
 
 ----
+**アクションプルダウンから作成を選択**
+
 ![create-ec2-2](./images/step-3/create-ec2-2.png "CREATE-EC2-2")
 
 ----
