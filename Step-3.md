@@ -399,7 +399,7 @@ nameserver 10.0.0.2
 ----
 
 ## Wordpressの設定変更
-**EC2サーバに接続しましょう(2台のうちどちらでも可) 。接続後クラスタエンドポイントでAuroraに接続しoption_valueの更新を行いましょう**
+**EC2サーバに接続しましょう(2台のうちどちらでも可) 。EC2からAuroraにクラスタエンドポイントで接続しoption_valueの更新を行いましょう。option_value変更後管理画面にログインするとoption_valueで指定したELBのDNS名でアクセスしていれば成功です。設定後確認しましょう**
 
 ```
 $ mysql -u admin -p -hwp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
@@ -432,7 +432,7 @@ mysql>
 ```
 
 ## セキュリティグループの変更
-**現在HTTPリクエストはELB、各EC2インスタンスが受け付けています。この設定をELBからのみアクセスを許可するよう、セキュリティグループの変更をしましょう**
+**現在HTTPリクエストはインターネットゲートウェイを経由後ELB、各EC2インスタンスの全てが受け付けています。この設定をインターネットゲートウェイからELBを経由し各EC2インスタンスに振り分けられるようにし、合わせてEC2インスタンスへ直接HTTPアクセスは禁止するようセキュリティグループの変更をしましょう**
 
 ![modify-security-group-1-1](./images/step-3/modify-security-group-1-1.png "MODIFY-SECURITY-GROUP-1-1")
 
