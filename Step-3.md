@@ -464,6 +464,8 @@ mysql>
 ![modify-security-group-3](./images/step-3/modify-security-group-3.png "MODIFY-SECURITY-GROUP-3")
 
 ----
+**HTTPのルールは1つにし、ELB(ALB)のセキュリティグループが指定できたら、保存ボタンを押下**
+
 ![modify-security-group-4](./images/step-3/modify-security-group-4.png "MODIFY-SECURITY-GROUP-4")
 
 ----
