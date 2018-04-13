@@ -449,6 +449,11 @@ mysql>
 ![modify-security-group-1-3](./images/step-3/modify-security-group-1-3.png "MODIFY-SECURITY-GROUP-1-3")
 
 ----
+**現時点ではEC2インスタンス2台のパブリックDNS、ELB(ALB)のDNS名の全てでWordPressが表示(HTTPリクエストが通る)できるはずです。これをELB(ALB)のDNS名のみアクセス許可にします**
+
+![modify-security-group-5](./images/step-3/modify-security-group-5.png "MODIFY-SECURITY-GROUP-5")
+
+----
 ![modify-security-group-2](./images/step-3/modify-security-group-2.png "MODIFY-SECURITY-GROUP-2")
 
 ----
