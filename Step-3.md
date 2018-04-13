@@ -454,9 +454,13 @@ mysql>
 ![modify-security-group-5](./images/step-3/modify-security-group-5.png "MODIFY-SECURITY-GROUP-5")
 
 ----
+**左下のセキュリティグループから作成したEC2インスタンス用のセキュリティグループ「web-userXX」をチェックし、インバウンドタブで表示されるルールを確認しましょう。この中にあるHTTPのルールを変更します。編集ボタンを押下**
+
 ![modify-security-group-2](./images/step-3/modify-security-group-2.png "MODIFY-SECURITY-GROUP-2")
 
 ----
+**インバウンドの一つ目のHTTPのルールのソースの値に「al」と入力しましょう。ELB(ALB)用に作成したセキュリティグループが補完して表示されたら選択しましょう。合わせて二つ目のHTTTPのルールはバツボタンにて削除しましょう**
+
 ![modify-security-group-3](./images/step-3/modify-security-group-3.png "MODIFY-SECURITY-GROUP-3")
 
 ----
