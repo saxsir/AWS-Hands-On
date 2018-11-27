@@ -1,0 +1,43 @@
+{
+  "variables": {
+    "AWS_ACCOUNT_ID": "939701988780"
+  },
+
+  "builders": [{
+    "type": "amazon-ebs",
+    "access_key": "{{user `aws_access_key`}}",
+    "secret_key": "{{user `aws_secret_key`}}",
+    "region": "ap-northeast-1",
+    "source_ami": "ami-00f9d04b3b3092052",
+    "ami_name": "packer-example {{isotime \"20060102150405\"}}",
+    "ami_description": "packer example image",
+    "ami_users": [
+      "{{user `AWS_ACCOUNT_ID`}}"
+     ],
+    "tags": {
+      "Timestamp": "{{timestamp}}",
+      "SourceAMI": "{{ .SourceAMI }}",
+      "SourceAMIName": "{{ .SourceAMIName }}"
+     },
+    "instance_type": "t2.micro",
+    "ssh_username": "ec2-user"
+  }],
+
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": [
+        "while [ ! -f /var/lib/cloud/instance/boot-finished ]; do echo 'Waiting for cloud-init...'; sleep 1; done"
+      ]
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "sudo yum update -y",
+        "sudo amazon-linux-extras install golang1.9 vim",
+        "sudo yum -y install https://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm",
+        "sudo yum -y --enablerepo=mysql56-community install mysql-community-client git"
+      ]
+    }
+  ]
+}
