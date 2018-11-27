@@ -1,5 +1,5 @@
 # Step-2
-Step-2ではミドルウェアレベルでの垂直分散を行います。具体的には「パブリックサブネット」内のEC2単体で賄っていたミドルウェアのうちMySQLを「プライベートサブネット」に「Amazon Aurora MySQL」を利用して切り出します。更にStep-3でのWebサーバの水平分散を見越しアップロードファイルの格納場所をAmazon S3に変更し対応します。
+Step-2ではミドルウェアレベルでの垂直分散を行います。具体的には「パブリックサブネット」内のEC2単体で賄っていたミドルウェアのうちMySQLを「プライベートサブネット」に「Amazon Aurora MySQL」を利用して切り出します。
 
 ## 概要図
 
@@ -32,7 +32,7 @@ S3について調べてみましょう(5分)
 |項目|設定値|
 |:-|:-|
 |セキュリティグループ名|db-ユーザ名 (例 db-user05)|
-|説明|RDS for Aurora|
+|説明|db-ユーザ名 (例 db-user05)|
 |VPC|作成したVPCを指定|
 
 ![security-3](./images/step-2/security-3.png "SECURITY3")
@@ -60,7 +60,7 @@ S3について調べてみましょう(5分)
 ![rds-subnet-2](./images/step-2/rds-subnet-2.png "RDS-SUBNET2")
 
 ----
-**サブネットグループの詳細を設定しましょう。名前は「db subnet userXX」XXは自身のユーザID、説明は「RDS for Aurora」、VPCは自身が作ったVPC(vpc-userXX)を指定しましょう**
+**サブネットグループの詳細を設定しましょう。名前は「db-subnet-userXX」XXは自身のユーザID、説明はなんでもいいです(名前をコピーでも)、VPCは自身が作ったVPC(vpc-userXX)を指定しましょう**
 
 ![rds-subnet-3-1](./images/step-2/rds-subnet-3-1.png "RDS-SUBNET3-1")
 
@@ -87,15 +87,15 @@ S3について調べてみましょう(5分)
 ![rds-2](./images/step-2/rds-2.png "RDS2")
 
 ----
-**マスターパスワードは「wordpress」を指定、DBインスタンスは一番上のdb.t2.smallを選択、その他は以下を確認しましょう。全て設定したら次へボタンを押下**
+**マスターパスワードは「vg1daypassword」を指定、DBインスタンスは一番上のdb.t2.smallを選択、その他は以下を確認しましょう。全て設定したら次へボタンを押下**
 
 |項目|設定値|
 |:-|:-|
 |DBインスタンスのクラス|db.t2.small|
 |マルチAZ配置|いいえ|
-|DBインスタンス識別子|wp-userXX XXは自身のID|
-|マスターユーザの名前|admin|
-|マスターパスワード|wordpress|
+|DBインスタンス識別子|db-userXX XXは自身のID|
+|マスターユーザの名前|root|
+|マスターパスワード|vg1daypassword|
 
 ![rds-3](./images/step-2/rds-3.png "RDS3")
 
@@ -105,7 +105,7 @@ S3について調べてみましょう(5分)
 |項目|設定値|
 |:-|:-|
 |Virtual Private Cloud (VPC)|自分が作成したVPCを選択|
-|サブネットグループ|自分が作成したサブネットグループ「db subnet userXX」|
+|サブネットグループ|自分が作成したサブネットグループ「db-subnet-userXX」|
 |パブリックアクセシビリティ|いいえを選択|
 |アベイラビリティゾーン|ap-noatheast-1d|
 |VPCセキュリティグループ|既存のVPCセキュリティグループの選択|
@@ -119,7 +119,7 @@ S3について調べてみましょう(5分)
 |項目|設定値|
 |:-|:-|
 |DBクラスター識別子|設定しない|
-|データベースの名前|wordpress|
+|データベースの名前|sampledb|
 |データベースのポート|3306|
 |DBパラメータグループ|そのまま|
 |DBクラスターのパラメータグループ|そのまま|
@@ -129,7 +129,11 @@ S3について調べてみましょう(5分)
 ----
 **一番下までスクロールし、拡張モニタリングを無効に設定、メンテナンス：マイナーバージョン自動アップグレードの無効化に設定、最後にDBインスタンスの作成ボタンを押下**
 
+**削除保護はチェックを外しておく（普段はつけておいて良いが、消す時に手間がかかるので今回は外す**
+
 ![rds-4-3](./images/step-2/rds-4-3.png "RDS4-3")
+
+![rds-4-4](./images/step-2/rds-4-4.png "RDS4-4")
 
 ----
 **DBインスタンスの詳細の表示ボタンを押下**
@@ -247,105 +251,38 @@ Enter password:
 **EC2インスタンスのMySQLは今後使用しないので停止し、自動起動の設定を抑止しましょう**
 
 ```
-$ sudo service mysqld stop
-$ sudo chkconfig --list mysqld
-mysqld          0:off   1:off   2:off   3:on    4:on    5:on    6:off
-
-$ sudo chkconfig --level 345 mysqld off
-$ sudo chkconfig --list mysqld
-mysqld          0:off   1:off   2:off   3:off   4:off   5:off   6:off
+$ sudo systemctl stop mysqld
+$ sudo systemctl disable mysqld
 ```
 
 **リストア**
 
 **Auroraのクラスタエンドポイントを指定してexport.sqlをリストアしましょう**
 
+**!注意! `<` の向きを間違うとバックアップしたファイルを上書きしてしまうので注意すること**
+
 ```
 mysql -u admin -p -hwp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com  wordpress < export.sql
 Enter password:
 ```
 
-## WordpressのDB接続変更
+## サンプルアプリのDB接続変更
+
+今回は環境変数に指定しているので
 
 ```
-$ sudo vi /var/www/html/wp-config.php
-- define('DB_HOST', 'localhost');
-+ define('DB_HOST', 'wp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com');
+$ sudo vi /etc/sysconfig/ec2-user
+-DATASOURCENAME=127.0.0.1
++DATASOURCENAME=wp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
 ```
 
-**ブラウザでWordpressサイトである、EC2インスタンスのパブリック DNS (IPv4)を開きましょう。データリストア前と同様にWordpressが表示されれば成功です。**
-
-## WordPressにプラグインの導入
-**S3を利用するためにWordPressにプラグインを導入しましょう。最初に「Amazon Web Services」で検索し、今すぐインストールボタンをクリックしましょう。**
-
-![plugin-1](./images/step-2/plugin-1.png "PLUGIN1")
-
-----
-**有効化をクリック**
-
-![plugin-2](./images/step-2/plugin-2.png "PLUGIN2")
-
-----
-**次に「WP Offload S3 Lite」を検索し今すぐインストールボタンをクリックしましょう**
-
-![plugin-3](./images/step-2/plugin-3.png "PLUGIN3")
-
-----
-**有効化をクリック**
-
-![plugin-4](./images/step-2/plugin-4.png "PLUGIN4")
-
-----
-
-**EC2インスタンスにログイン(事前にログインしてる場合は割愛する)**
+## アプリの再起動
 
 ```
-$ ssh -i 1day-userXX.pem -o StrictHostKeyChecking=no ec2-user@ec2-XXXXXX.com
-[ec2-user@ip-10-0-0-65 ~]$
+$ sudo systemctl restart 1dayapp
 ```
 
-**以下の2行(+は不要)を追記しましょう。アクセスキー、シークレットアクセスキーは事前に配布したものに書き換えましょう**
-```
-$ sudo vi /var/www/html/wp-config.php
-+ define( 'DBI_AWS_ACCESS_KEY_ID', '********************' );
-+ define( 'DBI_AWS_SECRET_ACCESS_KEY', '********************************' );
-```
-----
-**Offload S3クリック**
-
-![plugin-5](./images/step-2/plugin-5.png "PLUGIN5")
-
-----
-**Settingタブをクリックしアクセスキーが設定されていることを確認する**
-
-![plugin-6](./images/step-2/plugin-6.png "PLUGIN6")
-
-----
-**S3の作成、サービスからS3を選択**
-
-![create-s3-1](./images/step-2/create-s3-1.png "CREATE-S3-1")
-
-----
-**バケットを作成するボタンを押下**
-
-![create-s3-2](./images/step-2/create-s3-2.png "CREATE-S3-2")
-
-----
-**S3名は「s3-1day-userXX」ユーザIDは自身のを指定、その後、作成ボタンを押下**
-
-![create-s3-3](./images/step-2/create-s3-3.png "CREATE-S3-3")
-
-----
-**Media Libraryタブを選択し、作成したS3バケット名を入力し、Save Bucketボタンを押下**
-
-![plugin-7](./images/step-2/plugin-7.png "PLUGIN7")
-
-----
-**適当な画像を使ってブログを新規投稿しましょう**
-
-**ブログの画像アドレスをコピーしS3のアドレスが指し示しているか確認しましょう**
-
-![plugin-8](./images/step-2/plugin-8.png "PLUGIN8")
+**ブラウザでサンプルアプリが動いているEC2インスタンスのパブリック DNS (IPv4)を開きましょう。データリストア前と同様にサイトが表示されれば成功です。**
 
 ----
 **ここまでのオペレーションでStep2は完了です！**
