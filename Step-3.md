@@ -6,13 +6,6 @@ Step-3ではWebサーバとアプリケーションレイヤの水平分散、�
 ![step-3](./images/step-3/step-3.png "STEP3")
 
 ----
-
-## Question 水平分散とは
-水平分散について調べてみましょう(10分)
-
-## Question MultiA-Zとは
-AWS MultiA-Zについて調べてみましょう(10分)
-
 ## AuroraをMultiA-Z構成に変更
 **ここではStep-2で作成したAuroraインスタンスをMultiA-Zの機能を用いて冗長化します。サービスからRDSを選択しましょう**
 
@@ -43,6 +36,14 @@ AWS MultiA-Zについて調べてみましょう(10分)
 
 ![multiaz-4](./images/step-3/multiaz-4.png "MULTIAZ4")
 
+---
+
+## Question 水平分散とは
+水平分散について調べてみましょう(10分)
+
+## Question MultiA-Zとは
+AWS MultiA-Zについて調べてみましょう(10分)
+
 ----
 
 ## Auroraクラスターの確認
@@ -67,7 +68,7 @@ $ ssh -i 1day-userXX.pem -o StrictHostKeyChecking=no ec2-user@ec2-XXXXXX.com
 
 **クラスタエンドポイントを使用してAuroraに接続しましょう。**
 
-**注意 wp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.comは各自のクラスタエンドポイントに直すこと。パスワードはAurora作成時に設定した内容(この資料ではwordpressとなっています)を指定すること**
+**注意 wp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.comは各自のクラスタエンドポイントに直すこと。パスワードはAurora作成時に設定した内容(この資料ではvg1daypasswordなっています)を指定すること**
 
 ```
 $ mysql -u admin -p -hwp-user05-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
@@ -196,7 +197,7 @@ Address: 10.0.2.226
 ![create-ami-2](./images/step-3/create-ami-2.png "CREATE-AMI2")
 
 ----
-**イメージ名、イメージの説明ともに「wordpress ユーザ名」で設定、設定後イメージの作成ボタンを押下**
+**イメージ名、イメージの説明ともに「sampleapp ユーザ名」で設定、設定後イメージの作成ボタンを押下**
 
 ![create-ami-3](./images/step-3/create-ami-3.png "CREATE-AMI3")
 
@@ -392,44 +393,11 @@ nameserver 10.0.0.2
 ![create-elb-10](./images/step-3/create-elb-10.png "CREATE-ELB-10")
 
 ----
-**先ほどメモしたELB(ALB)のDNS名でブラウザを開きましょう。Wordpressが表示されれば成功です。ALBの設定から反映され、表示されるまで少し時間が掛かる可能性があります**
+**先ほどメモしたELB(ALB)のDNS名でブラウザを開きましょう。サンプルアプリが表示されれば成功です。ALBの設定から反映され、表示されるまで少し時間が掛かる可能性があります**
 
 ![create-elb-11](./images/step-3/create-elb-11.png "CREATE-ELB-11")
 
 ----
-
-## Wordpressの設定変更
-**EC2サーバに接続しましょう(2台のうちどちらでも可) 。EC2からAuroraにクラスタエンドポイントで接続しoption_valueの更新を行いましょう。option_value変更後管理画面にログインするとoption_valueで指定したELBのDNS名でアクセスしていれば成功です。設定後確認しましょう**
-
-```
-$ mysql -u admin -p -hwp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
-Enter password:
-
-mysql> use wordpress
-mysql> select option_value from wp_options where option_name = 'siteurl' or option_name = 'home';
-+--------------------------------------------------------------+
-| option_value                                                 |
-+--------------------------------------------------------------+
-| http://ec2-13-230-XX-73.ap-northeast-1.compute.amazonaws.com |
-| http://ec2-13-230-XX-73.ap-northeast-1.compute.amazonaws.com |
-+--------------------------------------------------------------+
-2 rows in set (0.00 sec)
-
-mysql> update wp_options set option_value='http://elb-userXX-1940738389.ap-northeast-1.elb.amazonaws.com' where option_name = 'siteurl' or option_name = 'home';
-Query OK, 2 rows affected (0.00 sec)
-Rows matched: 2  Changed: 2  Warnings: 0
-
-mysql> select option_value from wp_options where option_name = 'siteurl' or option_name = 'home';
-+---------------------------------------------------------------+
-| option_value                                                  |
-+---------------------------------------------------------------+
-| http://elb-userXX-1940738389.ap-northeast-1.elb.amazonaws.com |
-| http://elb-userXX-1940738389.ap-northeast-1.elb.amazonaws.com |
-+---------------------------------------------------------------+
-2 rows in set (0.00 sec)
-
-mysql>
-```
 
 ## セキュリティグループの変更
 **現在HTTPリクエストはインターネットゲートウェイを経由後ELB、各EC2インスタンスの全てが受け付けています。この設定をインターネットゲートウェイからELBを経由し各EC2インスタンスに振り分けられるようにし、合わせてEC2インスタンスへ直接HTTPアクセスは禁止するようセキュリティグループの変更をしましょう**
