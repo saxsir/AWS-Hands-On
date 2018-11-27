@@ -13,9 +13,6 @@ Step-2ではミドルウェアレベルでの垂直分散を行います。具�
 ## Question RDS、Auroraとは
 RDS(Relational Database Service)、Auroraについて調べてみましょう(10分)
 
-## Question S3とは
-S3について調べてみましょう(5分)
-
 ## DB用セキュリティグループの作成
 **ここではStep-1で作成したEC2インスタンス内にあるMySQLを垂直分散させるために、10.0.2.0のプライベートサブネットに作るAurora用のセキュリティグループを作成します。サービスからEC2を選択しましょう**
 
@@ -238,10 +235,10 @@ $ ssh -i 1day-userXX.pem -o StrictHostKeyChecking=no ec2-user@ec2-XXXXXX.com
 [ec2-user@ip-10-0-0-65 ~]$
 ```
 
-**mysqldumpを使いEC2インスタンスMySQLからデータバックアップ。パスワードは設定した内容を指定(wordpress)**
+**mysqldumpを使いEC2インスタンスMySQLからデータバックアップ。パスワードは設定した内容を指定(vg1daypassword)**
 
 ```
-$ mysqldump -u root -p wordpress > export.sql
+$ mysqldump -u root -p sampledb > export.sql
 Enter password:
 [ec2-user@ip-10-0-0-65 ~]$ ll
 合計 220
@@ -262,7 +259,7 @@ $ sudo systemctl disable mysqld
 **!注意! `<` の向きを間違うとバックアップしたファイルを上書きしてしまうので注意すること**
 
 ```
-mysql -u admin -p -hwp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com  wordpress < export.sql
+mysql -u admin -p -hwp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com sampledb < export.sql
 Enter password:
 ```
 

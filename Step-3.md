@@ -214,7 +214,7 @@ Address: 10.0.2.226
 ----
 
 ## 2台目のEC2インスタンスの作成(水平分散準備)
-**インターネットゲートウェイ、ロードバランサーからHTTPリクエストを受け付けるWeb+AP(WordPress)サーバであるEC2インスタンスを先ほど作成したAMIも用いて作成しましょう**
+**インターネットゲートウェイ、ロードバランサーからHTTPリクエストを受け付けるWeb+APサーバであるEC2インスタンスを先ほど作成したAMIも用いて作成しましょう**
 
 **左下AMIリンクを選択、作成したAMIをチェック**
 
@@ -402,22 +402,22 @@ nameserver 10.0.0.2
 ## セキュリティグループの変更
 **現在HTTPリクエストはインターネットゲートウェイを経由後ELB、各EC2インスタンスの全てが受け付けています。この設定をインターネットゲートウェイからELBを経由し各EC2インスタンスに振り分けられるようにし、合わせてEC2インスタンスへ直接HTTPアクセスは禁止するようセキュリティグループの変更をしましょう**
 
-**確認：パブリックDNSを確認(メモ)しブラウザでWordPressを開きましょう**
+**確認：パブリックDNSを確認(メモ)しブラウザでサンプルアプリを開きましょう**
 
 ![modify-security-group-1-1](./images/step-3/modify-security-group-1-1.png "MODIFY-SECURITY-GROUP-1-1")
 
 ----
-**確認：パブリックDNSを確認(メモ)しブラウザでWordPressを開きましょう**
+**確認：パブリックDNSを確認(メモ)しブラウザでサンプルアプリを開きましょう**
 
 ![modify-security-group-1-2](./images/step-3/modify-security-group-1-2.png "MODIFY-SECURITY-GROUP-1-2")
 
 ----
-**確認：DNS名を確認(メモ)しブラウザでWordPressを開きましょう**
+**確認：DNS名を確認(メモ)しブラウザでサンプルアプリを開きましょう**
 
 ![modify-security-group-1-3](./images/step-3/modify-security-group-1-3.png "MODIFY-SECURITY-GROUP-1-3")
 
 ----
-**現時点ではEC2インスタンス2台のパブリックDNS、ELB(ALB)のDNS名の全てでWordPressが表示(HTTPリクエストが通る)できるはずです。これをELB(ALB)のDNS名のみアクセス許可にします**
+**現時点ではEC2インスタンス2台のパブリックDNS、ELB(ALB)のDNS名の全てでサンプルアプリが表示(HTTPリクエストが通る)できるはずです。これをELB(ALB)のDNS名のみアクセス許可にします**
 
 ![modify-security-group-5](./images/step-3/modify-security-group-5.png "MODIFY-SECURITY-GROUP-5")
 

@@ -220,7 +220,7 @@ mysql> show databases;
 | mysql              |
 | performance_schema |
 | test               |
-| wordpress          |
+| sampledb           |
 +--------------------+
 5 rows in set (0.00 sec)
 ```
@@ -233,7 +233,7 @@ mysql> show databases;
 ----
 **「パブリックDNS(IPv4)」の値でブラウザを開きましょう。サンプルアプリのサイトが開けば設定完了です**
 
-![wordpress-9](./images/step-1/sample-app.png "SampleApp")
+![sampleapp](./images/step-1/sample-app.png "SampleApp")
 
 ----
 
