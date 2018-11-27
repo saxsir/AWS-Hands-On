@@ -1,5 +1,5 @@
 # Step-1
-Step-1ではVPCを作成し、WordpressがインストールされたAMIを用いてEC2インスタンスを起動します。
+Step-1ではVPCを作成し、サンプルアプリがインストールされたAMIを用いてEC2インスタンスを起動します。
 
 ## 概要図
 
@@ -127,7 +127,7 @@ Step-1ではVPCを作成し、WordpressがインストールされたAMIを用�
 ![ec2-2](./images/step-1/ec2-2.png "EC22")
 
 ----
-**マイAMIタブ、「1Day-AMI」の選択ボタンを押下**
+**マイAMIタブ、「1day-181128」の選択ボタンを押下**
 
 ![ec2-3](./images/step-1/ec2-3.png "EC23")
 
@@ -186,6 +186,10 @@ Step-1ではVPCを作成し、WordpressがインストールされたAMIを用�
 
 ![ec2-14](./images/step-1/ec2-14.png "EC214")
 
+---
+
+一旦ここまで、トップページが見えればOKです。
+
 ----
 
 ## Question AMIとは
@@ -202,7 +206,7 @@ $ ssh -i 1day-userXX.pem -o StrictHostKeyChecking=no ec2-user@ec2-XXXXXX.com
 
 **MySQLにrootユーザで接続し、所有しているデータベースの確認をしてみましょう**
 
-**パスワードは`wordpress`**
+**パスワードは`vg1daypassword`**
 
 ```
 $ mysql -u root -p
@@ -226,58 +230,10 @@ mysql> show databases;
 2.このサーバのデフォルトゲートウェイを確認しましょう。  
 3.このサーバの基本スペック(CPU数、メモリ、DISK容量など)を確認しましょう。
 
-## Wordpressの初期設定
-**「パブリックDNS(IPv4)」の値でブラウザを開きましょう。Wordpressのサイトが開けば作成成功です。初期設定では「日本語」を選択し続けるボタンを押下**
-
-![wordpress-1](./images/step-1/wordpress-1.png "Wordpress1")
-
 ----
-**「さあ、始めましょう」を押下**
+**「パブリックDNS(IPv4)」の値でブラウザを開きましょう。サンプルアプリのサイトが開けば設定完了です**
 
-![wordpress-2](./images/step-1/wordpress-2.png "Wordpress2")
-
-----
-**データベース名、ユーザ名、パスワードを以下の設定値にしましょう。その他の値はデフォルトのままで問題ありません。設定をしたら送信ボタンを押下**
-
-|項目|設定値|
-|:-|:-|
-|データベース名|wordpress|
-|ユーザ名|admin|
-|パスワード|wordpress|
-|データベースのホスト名|localhost|
-|テーブル接頭辞|wp_|
-
-![wordpress-3](./images/step-1/wordpress-3.png "Wordpress3")
-
-----
-**インストール実行を押下**
-
-![wordpress-4](./images/step-1/wordpress-4.png "Wordpress4")
-
-----
-**サイトのタイトル、ユーザ名、パスワード、メールアドレスを設定しましょう。パスワードは生成された値をメモなどに残しましょう。検索エンジンでの表示はチェックをしインデックスされない設定を有効にしましょう。設定したらWordPressを押下**
-
-![wordpress-5](./images/step-1/wordpress-5.png "Wordpress5")
-
-----
-**成功したらログインを押下**
-
-![wordpress-6](./images/step-1/wordpress-6.png "Wordpress6")
-
-----
-**ここまでの設定が間違いないか、ユーザ、パスワードを設定しログインしましょう**
-
-![wordpress-7](./images/step-1/wordpress-7.png "Wordpress7")
-
-----
-**管理画面にログインできれば設定完了です**
-
-![wordpress-8](./images/step-1/wordpress-8.png "Wordpress8")
-
-----
-**「パブリックDNS(IPv4)」の値でブラウザを開きましょう。Wordpressのサイトが開けば設定完了です**
-
-![wordpress-9](./images/step-1/wordpress-9.png "Wordpress9")
+![wordpress-9](./images/step-1/sample-app.png "SampleApp")
 
 ----
 
