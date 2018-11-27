@@ -8,12 +8,12 @@ run:
 	go run main.go
 
 run-mysql:
-	docker run --rm --name aws-hands-on-mysql -p 127.0.0.1:13306:3306 \
+	docker run --rm --name vg-1day-mysql -p 127.0.0.1:13306:3306 \
 	  -v $(CURDIR)/migrations:/docker-entrypoint-initdb.d \
-	  -e MYSQL_DATABASE=sample-db -e MYSQL_ROOT_PASSWORD=password -d mysql:5.7
+	  -e MYSQL_DATABASE=sampledb -e MYSQL_ROOT_PASSWORD=password -d mysql:5.6
 
 clean:
-	docker stop aws-hands-on-mysql
+	docker stop vg-1day-mysql
 
 mysql-debug:
 	mysql -uroot -ppassword -h127.0.0.1 -P13306
