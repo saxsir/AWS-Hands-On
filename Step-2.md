@@ -269,8 +269,8 @@ Enter password:
 
 ```
 $ sudo vi /etc/sysconfig/ec2-user
--DATASOURCENAME=127.0.0.1
-+DATASOURCENAME=wp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
+-DATASOURCENAME=root:vg1daypassword@tcp(127.0.0.1:3306)/sampledb
++DATASOURCENAME=root:vg1daypassword@tcp(wp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com:3306)/sampledb
 ```
 
 ## アプリの再起動
