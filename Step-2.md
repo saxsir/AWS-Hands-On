@@ -164,10 +164,10 @@ $ ssh -i 1day-userXX.pem -o StrictHostKeyChecking=no ec2-user@ec2-XXXXXX.com
 
 **クラスタエンドポイントを使用してAuroraに接続しましょう。読み書きの権限についても確認しましょう。**
 
-**注意 wp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.comは各自のクラスタエンドポイントに直すこと。パスワードはAurora作成時に設定した内容を指定すること**
+**注意 db-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.comは各自のクラスタエンドポイントに直すこと。パスワードはAurora作成時に設定した内容を指定すること**
 
 ```
-$ mysql -u admin -p -hwp-user05-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
+$ mysql -uroot -p -hdb-user05-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
 
 mysql> select @read_only;
 +------------+
@@ -183,22 +183,22 @@ mysql> exit
 **続いてネットワークセグメントの確認(クラスタエンドポイント)をしましょう**
 
 ```
-$ nslookup wp-user05-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
+$ nslookup db-user05-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
 Server:     10.0.0.2
 Address:    10.0.0.2#53
 
 Non-authoritative answer:
-wp-user05-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com canonical name = wp-user05.cenae7eyijpr.ap-northeast-1.rds.amazonaws.com.
-Name:   wp-user05.cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
+db-user05-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com canonical name = db-user05.cenae7eyijpr.ap-northeast-1.rds.amazonaws.com.
+Name:   db-user05.cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
 Address: 10.0.2.226
 ```
 
 **読み込みエンドポイントを使用してAuroraに接続しましょう。読み書きの権限についても確認しましょう。**
 
-**注意 wp-userXX-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.comは各自の読み込みエンドポイントに直すこと。パスワードはAurora作成時に設定した内容を指定すること**
+**注意 db-userXX-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.comは各自の読み込みエンドポイントに直すこと。パスワードはAurora作成時に設定した内容を指定すること**
 
 ```
-$ mysql -u admin -p -hwp-userXX-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
+$ mysql -uroot -p -hdb-userXX-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
 
 mysql> select @read_only;
 +------------+
@@ -215,13 +215,13 @@ mysql> exit
 
 ```
 
-$ nslookup wp-user05-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
+$ nslookup db-user05-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
 Server:     10.0.0.2
 Address:    10.0.0.2#53
 
 Non-authoritative answer:
-wp-user05-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com  canonical name = wp-user05.cenae7eyijpr.ap-northeast-1.rds.amazonaws.com.
-Name:   wp-user05.cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
+db-user05-cluster.cluster-ro-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com  canonical name = db-user05.cenae7eyijpr.ap-northeast-1.rds.amazonaws.com.
+Name:   db-user05.cenae7eyijpr.ap-northeast-1.rds.amazonaws.com
 Address: 10.0.2.226
 ```
 
@@ -259,7 +259,7 @@ $ sudo systemctl disable mysqld
 **!注意! `<` の向きを間違うとバックアップしたファイルを上書きしてしまうので注意すること**
 
 ```
-mysql -u admin -p -hwp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com sampledb < export.sql
+mysql -uroot -p -hdb-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com sampledb < export.sql
 Enter password:
 ```
 
@@ -270,7 +270,7 @@ Enter password:
 ```
 $ sudo vi /etc/sysconfig/ec2-user
 -DATASOURCENAME=root:vg1daypassword@tcp(127.0.0.1:3306)/sampledb
-+DATASOURCENAME=root:vg1daypassword@tcp(wp-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com:3306)/sampledb
++DATASOURCENAME=root:vg1daypassword@tcp(db-userXX-cluster.cluster-cenae7eyijpr.ap-northeast-1.rds.amazonaws.com:3306)/sampledb
 ```
 
 ## アプリの再起動
