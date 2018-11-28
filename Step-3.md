@@ -282,19 +282,19 @@ Address: 10.0.2.226
 ![create-ec2-12](./images/step-3/create-ec2-12.png "CREATE-EC2-12")
 
 ----
-**作成した#2のインスタンスをチェックし、パブリックDNS(IPv4)のあたいをメモしブラウザでWordpressが参照できるか確認しましょう**
+**作成した#2のインスタンスをチェックし、パブリックDNS(IPv4)のあたいをメモしブラウザでサンプルアプリが参照できるか確認しましょう**
 
-![create-ec2-13](./images/step-3/create-ec2-13.png "CREATE-EC2-13")
+![create-ec2-13](./images/step-3/sample-app.png "CREATE-EC2-13")
 
 ----
-**Wordpressが表示されれば成功です**
+**サンプルアプリが表示されれば成功です**
 
 ![create-ec2-14](./images/step-3/sample-app.png "CREATE-EC2-14")
 
 ----
 
 ## EC2サーバの確認
-**作成した2台目のEC2サーバにログイン(Wordpressを表示したパブリックDNSを使用)しIPアドレス、ゲートウェイ、ネームサーバなどを確認しましょう**
+**作成した2台目のEC2サーバにログイン(サンプルアプリを表示したパブリックDNSを使用)しIPアドレス、ゲートウェイ、ネームサーバなどを確認しましょう**
 
 ```
 $ ssh -i 1day-userXX.pem -o StrictHostKeyChecking=no ec2-user@ec2-XXXXXXX.ap-northeast-1.compute.amazonaws.com
