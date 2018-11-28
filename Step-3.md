@@ -289,7 +289,7 @@ Address: 10.0.2.226
 ----
 **Wordpressが表示されれば成功です**
 
-![create-ec2-14](./images/step-3/create-ec2-14.png "CREATE-EC2-14")
+![create-ec2-14](./images/step-3/sample-app.png "CREATE-EC2-14")
 
 ----
 
@@ -395,7 +395,7 @@ nameserver 10.0.0.2
 ----
 **先ほどメモしたELB(ALB)のDNS名でブラウザを開きましょう。サンプルアプリが表示されれば成功です。ALBの設定から反映され、表示されるまで少し時間が掛かる可能性があります**
 
-![create-elb-11](./images/step-3/create-elb-11.png "CREATE-ELB-11")
+![create-elb-11](./images/step-3/sample-app.png "CREATE-ELB-11")
 
 ----
 
@@ -439,7 +439,7 @@ nameserver 10.0.0.2
 ----
 **ELB(ALB)経由でアクセス出来れば設定成功です**
 
-![modify-security-group-5](./images/step-3/modify-security-group-5.png "MODIFY-SECURITY-GROUP-5")
+![modify-security-group-5](./images/step-3/sample-app.png "MODIFY-SECURITY-GROUP-5")
 
 ----
 **2台のEC2に直接アクセスした場合はタイムアウトなどでエラーとなれば設定成功です**
