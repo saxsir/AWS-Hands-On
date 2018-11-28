@@ -1,11 +1,9 @@
 package main
 
 import (
+	"database/sql"
 	"log"
 	"net/http"
-
-	"database/sql"
-
 	"os"
 
 	_ "github.com/go-sql-driver/mysql"
@@ -27,7 +25,28 @@ func main() {
 		w.WriteHeader(200)
 	})
 
-	http.Handle("/", http.FileServer(http.Dir("static")))
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(200)
+		w.Write([]byte(`
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>サンプルアプリ</title>
+</head>
+<body>
+  <h1>1day サンプルアプリ</h1>
+  <a href="https://voyagegroup.com/" alt="VOYAGE GROUP"><img src="https://voyagegroup.com/wp-content/themes/voyagegroup/common/img/img_ogp_cp.png" width="400"></a>
+
+  <h2>DB接続確認リンク</h2>
+  <ul>
+    <li><a href="event?name=hoge&value=fuga">event?name=hoge&value=fuga</a>
+  </ul>
+</body>
+</html>
+		`))
+	})
+
 	http.HandleFunc("/event", func(w http.ResponseWriter, r *http.Request) {
 		stmt, err := db.Prepare("INSERT INTO eventlog(at, name, value) values(NOW(), ?, ?)")
 		if err != nil {
